@@ -28,8 +28,6 @@ void DutchFlagPartition(int pivot_index, vector<int>* A) {
 		else
 			equal++;
 	}
-
-
 }
 
 void A_DutchFlagPartition(int pivot_index, vector<int>* A) {
