@@ -19,7 +19,7 @@ using std::vector;
 
 // @include
 int FindBatteryCapacity(const vector<int>& h) {
-	int mi=numeric::limits<int>::max();
+	int mi=numeric_limits<int>::max();
 	int mx=0;
 	for(auto k:h)
 		if(k<mi)
