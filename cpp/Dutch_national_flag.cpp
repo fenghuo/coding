@@ -15,7 +15,42 @@ using std::uniform_int_distribution;
 using std::vector;
 
 // @include
+// 14:31
 void DutchFlagPartition(int pivot_index, vector<int>* A) {
+	auto&ref=*A;
+	auto p=ref[pivot_index];
+	int less=0,equal=0,larger=ref.size()-1;
+	while(equal<=larger){
+		if(ref[equal]<p)
+			swap(ref[less++],ref[equal++]);
+		else if(ref[equal]>p)
+			swap(ref[equal],ref[larger--]);
+		else
+			equal++;
+	}
+
+
+}
+
+void A_DutchFlagPartition(int pivot_index, vector<int>* A) {
+	auto&ref=*A;
+	int a=0,b=0;
+	int p=ref[pivot_index];
+	cout<<"p: "<<p<<endl;
+	for(size_t i=0;i<ref.size();i++){
+		if(ref[i]<p){
+			if(i==b)
+				swap(ref[a++],ref[b++]);
+			else{
+				swap(ref[b++],ref[a]);
+				swap(ref[i],ref[a++]);
+			}
+		} else if(ref[i]==p) {
+			swap(ref[i],ref[b++]);
+		}
+	}
+}
+void S_DutchFlagPartition(int pivot_index, vector<int>* A) {
   auto& A_ref = *A;
   int pivot = A_ref[pivot_index];
   /**
@@ -66,6 +101,7 @@ int main(int argc, char* argv[]) {
     int pivot = A[pivot_index];
     DutchFlagPartition(pivot_index, &A);
     int i = 0;
+
     while (A[i] < pivot && i < A.size()) {
       cout << A[i] << ' ';
       ++i;
@@ -79,6 +115,7 @@ int main(int argc, char* argv[]) {
       ++i;
     }
     cout << endl;
+    cout<<A.size()<<endl;
     assert(i == A.size());
   }
   return 0;
