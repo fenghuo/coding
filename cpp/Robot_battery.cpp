@@ -19,6 +19,16 @@ using std::vector;
 
 // @include
 int FindBatteryCapacity(const vector<int>& h) {
+	int mi=numeric::limits<int>::max();
+	int mx=0;
+	for(auto k:h)
+		if(k<mi)
+			mi=k;
+		else
+			mx=max(mx,k-mi);
+	return mx;
+}
+int S_FindBatteryCapacity(const vector<int>& h) {
   int min_height = numeric_limits<int>::max(), capacity = 0;
   for (const int &height : h) {
     capacity = max(capacity, height - min_height);
