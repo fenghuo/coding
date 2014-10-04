@@ -15,7 +15,7 @@ void RotateArray(int i, vector<int>* A) {
 	auto&v=*A;
 	reverse(A->begin(),A->end());
 	reverse(A->begin(),A->begin()+i%A->size());
-	reverse(A->begin()+i%A->size()+1,A->end());
+	reverse(A->begin()+i%A->size(),A->end());
 }
 
 
