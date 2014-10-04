@@ -14,10 +14,34 @@ using std::random_device;
 using std::uniform_int_distribution;
 using std::vector;
 
-// @include
+using namespace std;
 
+// @include
+// 22:19
 vector<int> find_0_sum_subset(const vector<int> &A) {
-	return {};
+	int n=A.size();
+	vector<int> idx(n,-1);
+	vector<int> sum(n,0);
+	vector<int> ans;
+	for(int i=0;i<n;i++)
+		sum[i]+=A[i]+(i==0?0:sum[i-1]);
+	for(int i=0;i<n;i++){
+		if(sum[i]%n==0)
+		{
+			ans.resize(i+1);
+			copy(A.begin(),A.begin()+i+1,ans.begin());
+			break;
+		} else {
+			int mod = sum[i]%n;
+			if(idx[mod] >= 0) {
+				ans.resize(i-idx[mod]);
+				copy(A.begin()+idx[mod]+1,A.begin()+i+1,ans.begin());
+				break;
+			} else 
+				idx[mod] = i;
+		}
+	}
+	return ans;
 }
 vector<int> S_find_0_sum_subset(const vector<int> &A) {
   vector<int> prefix_sum(A);
