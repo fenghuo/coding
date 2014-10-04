@@ -15,7 +15,11 @@ using std::uniform_int_distribution;
 using std::vector;
 
 // @include
+
 vector<int> find_0_sum_subset(const vector<int> &A) {
+	return {};
+}
+vector<int> S_find_0_sum_subset(const vector<int> &A) {
   vector<int> prefix_sum(A);
   for (int i = 0; i < prefix_sum.size(); ++i) {
     prefix_sum[i] += i > 0 ? prefix_sum[i - 1] : 0;
