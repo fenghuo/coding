@@ -25,8 +25,8 @@ vector<int> NextPermutation(vector<int> p) {
 	else{
 		sort(p.begin()+i,p.end());
 		for(size_t j=i;j<p.size();j++)
-			if(A[j]>A[i-1]){
-				swap(A[i-1],A[j]);
+			if(p[j]>p[i-1]){
+				swap(p[i-1],p[j]);
 				break;
 			}
 	}
