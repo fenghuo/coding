@@ -87,6 +87,6 @@ int main(int argc, char *argv[]) {
   assert(string("eeeffffee") == Decoding("3e4f2e"));
   assert(string("aaaaaaaaaaffffee") == Decoding("10a4f2e"));
   string s="aaaabbbcccddbcbbbeeeefbbbcccdddbbbbccc";
-  assert(s==Decoding(Encoding(s));
+  assert(s==Decoding(Encoding(s)));
   return 0;
 }
