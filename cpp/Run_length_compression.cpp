@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
   if (argc == 3) {
     cout << Encoding(argv[1]) << ' ' << Decoding(argv[2]) << endl;
   }
-  assert(string("4a1b3c2a") == Encoding("aaaabcccaa"));
+  assert(string("4a1b3c2a1") == Encoding("aaaabcccaa"));
   //assert(string("eeeffffee") == Decoding("3e4f2e"));
   //assert(string("aaaaaaaaaaffffee") == Decoding("10a4f2e"));
   return 0;
