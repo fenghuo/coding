@@ -21,13 +21,15 @@ string ReplaceAndRemove(string s) {
 			s[l++]=s[i];
 			if(s[i]=='a')
 				a++;
+			l++;
 		}
 	}
-	int L=l+a-1;
-	s.resize(L+1);
+	int L=l+a;
+	s.resize(L);
+	L--;
 	for(int i=l-1;i>=0;i--){
 		if(s[i]=='a')
-			s[L--]=s[L--]='a';
+			s[L--]=s[L--]='d';
 		else
 			s[L--]=s[i];
 	}
