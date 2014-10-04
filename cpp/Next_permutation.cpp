@@ -16,6 +16,23 @@ using std::vector;
 
 // @include
 vector<int> NextPermutation(vector<int> p) {
+	auto i=p.size()-1;
+	for(i;i>0;i--)
+		if(p[i]>p[i-1])
+			break;	
+	if(i==0)
+		sort(p.begin(),p.end());
+	else{
+		sort(p.begin()+i,p.end());
+		for(size_t j=i;j<p.size();j++)
+			if(A[j]>A[i-1]){
+				swap(A[i-1],A[j]);
+				break;
+			}
+	}
+	return p;
+}
+vector<int> NextPermutation(vector<int> p) {
   int k = p.size() - 2;
   while (k >= 0 && p[k] >= p[k + 1]) {
     --k;
