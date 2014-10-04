@@ -50,6 +50,7 @@ set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
 void PhoneMnemonic(const string &num) {
   string answer(num.size(), 0);
   assert(PhoneMnemonicHelper(num, 0, &answer)==S_PhoneMnemonicHelper(num, 0, &answer));
+	cout<<s2.size()<<endl;
 }
 
 string RandString(int len) {
