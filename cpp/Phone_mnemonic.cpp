@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
   if (argc == 2) {
     num = argv[1];
   } else {
-    num = RandString(10);
+    num = RandString(4);
   }
   PhoneMnemonic(num);
   cout << "number = " << num << endl;
