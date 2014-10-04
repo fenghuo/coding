@@ -5,6 +5,7 @@
 #include <random>
 #include <string>
 #include <set>
+#include <cassert>
 
 using std::array;
 using std::cout;
