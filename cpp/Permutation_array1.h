@@ -21,7 +21,7 @@ void ApplyPermutation(vector<int>* perm, vector<int>* A) {
 			int t=V[c];
 			while(n>=0){
 				V[c]=V[n];
-				p[c]=-1
+				p[c]=-1;
 				c=n;
 				n=p[n];
 			}
