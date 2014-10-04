@@ -34,7 +34,7 @@ string RandString(int len) {
 
 // @include
 void ReverseWords(string* S) {
-	int l=strlen(s);
+	int l=S->size();
 	auto s=S->begin();
 	reverse(s,s+l);
 	int last=0;
