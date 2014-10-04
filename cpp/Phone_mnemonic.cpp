@@ -4,6 +4,7 @@
 #include <iostream>
 #include <random>
 #include <string>
+#include <set>
 
 using std::array;
 using std::cout;
@@ -13,12 +14,18 @@ using std::random_device;
 using std::string;
 using std::uniform_int_distribution;
 
+using namespace std;
+
+set<string> s1;
+set<string> s2;
+
 void PhoneMnemonicHelper(const string &num, int d, string* answer);
+
 
 // @include
 void PhoneMnemonic(const string &num) {
   string answer(num.size(), 0);
-  PhoneMnemonicHelper(num, 0, &answer);
+  assert(PhoneMnemonicHelper(num, 0, &answer)==S_PhoneMnemonicHelper(num, 0, &answer));
 }
 
 const int kNumTelDigits = 10;
@@ -28,9 +35,12 @@ const array<string, kNumTelDigits> M = {{"0", "1", "ABC", "DEF", "GHI",
                                          "JKL", "MNO", "PQRS", "TUV",
                                          "WXYZ"}};
 
-void PhoneMnemonicHelper(const string &num, int d, string* answer) {
+set<string> PhoneMnemonicHelper(const string &num, int d, string* answer) {
+
+}
+set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
   if (d == num.size()) {  // All digits are processed so we output answer.
-    cout << *answer << endl;
+	s2.insert(*answer);
   } else {
     // Try all corresponding characters for this digit.
     for (const char &c : M[num[d] - '0']) {
