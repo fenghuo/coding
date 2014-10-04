@@ -19,14 +19,7 @@ using namespace std;
 set<string> s1;
 set<string> s2;
 
-void PhoneMnemonicHelper(const string &num, int d, string* answer);
 
-
-// @include
-void PhoneMnemonic(const string &num) {
-  string answer(num.size(), 0);
-  assert(PhoneMnemonicHelper(num, 0, &answer)==S_PhoneMnemonicHelper(num, 0, &answer));
-}
 
 const int kNumTelDigits = 10;
 
@@ -50,6 +43,12 @@ set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
   }
 }
 // @exclude
+
+// @include
+void PhoneMnemonic(const string &num) {
+  string answer(num.size(), 0);
+  assert(PhoneMnemonicHelper(num, 0, &answer)==S_PhoneMnemonicHelper(num, 0, &answer));
+}
 
 string RandString(int len) {
   default_random_engine gen((random_device())());
