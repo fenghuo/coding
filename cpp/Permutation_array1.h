@@ -12,6 +12,24 @@ namespace ApplyPermutation1 {
 
 // @include
 void ApplyPermutation(vector<int>* perm, vector<int>* A) {
+	auto&p=*perm;
+	auto&V=*A;
+	for(size_t i=0;i<A->size();i++){
+		int n=p[i];
+		int c=i;
+		if(n>=0){
+			int t=V[c];
+			while(n>=0){
+				V[c]=V[n];
+				p[c]=-1
+				c=n;
+				n=p[n];
+			}
+			V[c]=t;
+		}
+	}
+}
+void S_ApplyPermutation(vector<int>* perm, vector<int>* A) {
   for (int i = 0; i < A->size(); ++i) {
     // Check if the element at index i has already been moved
     // by seeing if (*perm)[i] is negative.
