@@ -73,7 +73,7 @@ vector<int> S_find_0_sum_subset(const vector<int> &A) {
 void check_ans(const vector<int> &A, const vector<int> &ans) {
   int sum = 0;
   for (const int &a : ans) {
-    sum = (sum + A[a]) % A.size();
+    sum = (sum + a) % A.size();
   }
   assert(sum == 0);
 }
