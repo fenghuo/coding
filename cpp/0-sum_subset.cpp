@@ -36,6 +36,7 @@ vector<int> find_0_sum_subset(const vector<int> &A) {
 			if(idx[mod] >= 0) {
 				ans.resize(i-idx[mod]);
 				copy(A.begin()+idx[mod]+1,A.begin()+i+1,ans.begin());
+				cout<<" --- "<<endl;
 				break;
 			} else 
 				idx[mod] = i;
@@ -74,7 +75,6 @@ void check_ans(const vector<int> &A, const vector<int> &ans) {
   for (const int &a : ans) {
     sum = (sum + A[a]) % A.size();
   }
-  cout<<sum<<endl;
   assert(sum == 0);
 }
 
