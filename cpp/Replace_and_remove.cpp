@@ -14,6 +14,27 @@ using std::uniform_int_distribution;
 
 // @include
 string ReplaceAndRemove(string s) {
+	int a=0;
+	int l=0;
+	for(size_t i=0;i<s.size();i++) {
+		if(s[i]!='b'){
+			s[l++]=s[i];
+			if(s[i]=='a')
+				a++;
+		}
+	}
+	int L=l+a-1;
+	s.resize(L);
+	for(int i=l-1;i>=0;i--){
+		if(s[i]=='a')
+			s[L--]=s[L--]='a';
+		else
+			s[L--]=s[i];
+	}
+	return s;
+}
+
+string S_ReplaceAndRemove(string s) {
   // Forward iteration: remove "b"s and count the number of "a"s.
   int write_idx = 0, a_count = 0;
   for (const char &c : s) {
