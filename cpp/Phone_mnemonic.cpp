@@ -33,6 +33,7 @@ set<string> PhoneMnemonicHelper(const string &num, int d, string* answer) {
 	return s1;
 }
 set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
+	cout<<*answer<<endl;
   if (d == num.size()) {  // All digits are processed so we output answer.
 	s2.insert(*answer);
 	cout<<*answer<<endl;
