@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <locale>
 
 using std::cout;
 using std::endl;
@@ -16,7 +17,17 @@ using namespace std;
 
 // @include
 string Decoding(const string &s) {
-
+	int count=0;
+	string ans="";
+	for(auto&c:s){
+		if(isdigit(c))
+			count=count*10+(c-'0');
+		else{
+			ans.append(count,c);
+			count=0;
+		}	
+	}
+	return ans;
 }
 
 string Encoding(const string &s) {
@@ -73,7 +84,7 @@ int main(int argc, char *argv[]) {
   assert(string("4a1b3c2a") == Encoding("aaaabcccaa"));
   assert(string("") == Encoding(""));
   assert(string("11a") == Encoding("aaaaaaaaaaa"));
-  //assert(string("eeeffffee") == Decoding("3e4f2e"));
-  //assert(string("aaaaaaaaaaffffee") == Decoding("10a4f2e"));
+  assert(string("eeeffffee") == Decoding("3e4f2e"));
+  assert(string("aaaaaaaaaaffffee") == Decoding("10a4f2e"));
   return 0;
 }
