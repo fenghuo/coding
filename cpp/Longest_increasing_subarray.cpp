@@ -17,6 +17,21 @@ using std::vector;
 
 // @include
 pair<int, int> FindLongestIncreasingSubarray(const vector<int> &A) {
+	size_t a=0,b=1;	
+	size_t last=0;
+	for(size_t i=1;i<=A.size();i++){
+		if(i==A.size() || A[i]<=A[i-1]){
+			if(i-last>b-a){
+				a=last;
+				b=i;
+			}
+			last=i;
+		}
+	}
+	return {a,b};
+}
+
+pair<int, int> S_FindLongestIncreasingSubarray(const vector<int> &A) {
   int max_length = 1;
   pair<int, int> ans(0, 0);
   int i = 0;
