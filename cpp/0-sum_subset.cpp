@@ -74,6 +74,7 @@ void check_ans(const vector<int> &A, const vector<int> &ans) {
   for (const int &a : ans) {
     sum = (sum + A[a]) % A.size();
   }
+  cout<<sum<<endl;
   assert(sum == 0);
 }
 
