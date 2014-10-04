@@ -21,7 +21,6 @@ string ReplaceAndRemove(string s) {
 			s[l++]=s[i];
 			if(s[i]=='a')
 				a++;
-			l++;
 		}
 	}
 	int L=l+a;
@@ -32,6 +31,7 @@ string ReplaceAndRemove(string s) {
 			s[L--]=s[L--]='d';
 		else
 			s[L--]=s[i];
+		cout<<L<<endl;
 	}
 	return s;
 }
