@@ -20,10 +20,8 @@ vector<int> NextPermutation(vector<int> p) {
 	for(i;i>0;i--)
 		if(p[i]>p[i-1])
 			break;	
-	if(i==0)
-		sort(p.begin(),p.end());
-	else{
-		sort(p.begin()+i,p.end());
+	reverse(p.begin()+i,p.end());
+	if(i)
 		for(size_t j=i;j<p.size();j++)
 			if(p[j]>p[i-1]){
 				swap(p[i-1],p[j]);
