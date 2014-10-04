@@ -33,8 +33,9 @@ string RandString(int len) {
 }
 
 // @include
-void ReverseWords(string* s) {
+void ReverseWords(string* S) {
 	int l=strlen(s);
+	auto s=S->begin();
 	reverse(s,s+l);
 	int last=0;
 	for(int i=0;i<=l;i++)
