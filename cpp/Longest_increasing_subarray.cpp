@@ -28,7 +28,7 @@ pair<int, int> FindLongestIncreasingSubarray(const vector<int> &A) {
 			last=i;
 		}
 	}
-	return {a,b};
+	return {a,b-1};
 }
 
 pair<int, int> S_FindLongestIncreasingSubarray(const vector<int> &A) {
