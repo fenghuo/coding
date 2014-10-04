@@ -21,6 +21,31 @@ using namespace std;
 vector<int> find_0_sum_subset(const vector<int> &A) {
 	int n=A.size();
 	vector<int> idx(n,-1);
+	vector<int> sum(n+1,0);
+	vector<int> ans;
+	for(int i=1;i<=n;i++)
+		sum[i]+=A[i-1]+sum[i-1];
+	for(int i=1;i<=n;i++){
+		if(sum[i]%n==0)
+		{
+			ans.resize(i);
+			copy(A.begin(),A.begin()+i,ans.begin());
+			break;
+		} else {
+			int mod = sum[i]%n;
+			if(idx[mod] >= 0) {
+				ans.resize(i-idx[mod]);
+				copy(A.begin()+idx[mod],A.begin()+i,ans.begin());
+				break;
+			} else 
+				idx[mod] = i;
+		}
+	}
+	return ans;
+}
+vector<int> A_find_0_sum_subset(const vector<int> &A) {
+	int n=A.size();
+	vector<int> idx(n,-1);
 	vector<int> sum(n,0);
 	vector<int> ans;
 	for(int i=0;i<n;i++)
@@ -36,7 +61,6 @@ vector<int> find_0_sum_subset(const vector<int> &A) {
 			if(idx[mod] >= 0) {
 				ans.resize(i-idx[mod]);
 				copy(A.begin()+idx[mod]+1,A.begin()+i+1,ans.begin());
-				cout<<" --- "<<endl;
 				break;
 			} else 
 				idx[mod] = i;
