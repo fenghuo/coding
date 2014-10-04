@@ -31,7 +31,6 @@ string ReplaceAndRemove(string s) {
 			s[L--]=s[L--]='d';
 		else
 			s[L--]=s[i];
-		cout<<L<<endl;
 	}
 	return s;
 }
