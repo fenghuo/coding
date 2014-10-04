@@ -30,7 +30,7 @@ const array<string, kNumTelDigits> M = {{"0", "1", "ABC", "DEF", "GHI",
                                          "WXYZ"}};
 
 set<string> PhoneMnemonicHelper(const string &num, int d, string* answer) {
-
+	return s1;
 }
 set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
   if (d == num.size()) {  // All digits are processed so we output answer.
@@ -42,6 +42,7 @@ set<string> S_PhoneMnemonicHelper(const string &num, int d, string* answer) {
       PhoneMnemonicHelper(num, d + 1, answer);
     }
   }
+	return s2;
 }
 // @exclude
 
