@@ -38,7 +38,7 @@ void ReverseWords(string* s) {
 	reverse(s,s+l);
 	int last=0;
 	for(int i=0;i<=l;i++)
-		if(i==l || s[i]==' '){
+		if(i==l || *(s+i)==' '){
 			reverse(s+last,s+l);
 			last=l+1;
 		}
