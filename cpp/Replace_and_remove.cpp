@@ -24,7 +24,7 @@ string ReplaceAndRemove(string s) {
 		}
 	}
 	int L=l+a-1;
-	s.resize(L);
+	s.resize(L+1);
 	for(int i=l-1;i>=0;i--){
 		if(s[i]=='a')
 			s[L--]=s[L--]='a';
