@@ -13,6 +13,8 @@ using std::random_device;
 using std::string;
 using std::uniform_int_distribution;
 
+using namespace std;
+
 string RandString(int len) {
   default_random_engine gen((random_device())());
   string ret;
@@ -32,6 +34,17 @@ string RandString(int len) {
 
 // @include
 void ReverseWords(string* s) {
+	int l=strlen(s);
+	reverse(s,s+l);
+	int last=0;
+	for(int i=0;i<=l;i++)
+		if(i==l || s[i]==' '){
+			reverse(s+last,s+l);
+			last=l+1;
+		}
+}
+
+void S_ReverseWords(string* s) {
   // Reverses the whole string first.
   reverse(s->begin(), s->end());
 
