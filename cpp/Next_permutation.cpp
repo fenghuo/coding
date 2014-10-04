@@ -32,7 +32,7 @@ vector<int> NextPermutation(vector<int> p) {
 	}
 	return p;
 }
-vector<int> NextPermutation(vector<int> p) {
+vector<int> S_NextPermutation(vector<int> p) {
   int k = p.size() - 2;
   while (k >= 0 && p[k] >= p[k + 1]) {
     --k;
