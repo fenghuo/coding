@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
     // Use built-in function verification.
     bool has_next_one = next_permutation(p.begin(), p.end());
     assert((ans.size() == 0 && !has_next_one) ||
-           equal(ans.cbegin(), ans.cend(), p.cbegin()));
+           equal(ans.begin(), ans.end(), p.begin()));
   }
   return 0;
 }
