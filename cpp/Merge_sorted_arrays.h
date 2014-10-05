@@ -23,7 +23,7 @@ vector<int> MergeArrays(const vector<vector<int>>& S) {
 	vector<int> idx(S.size(),1);
 	vector<int> res;
 	for(size_t i=0;i<S.size();i++)
-		pq.push({arr[0],i});
+		pq.push({S[i][0],i});
 	while(pq.size()){
 		auto&top=pq.top();
 		pq.pop();
@@ -68,6 +68,6 @@ vector<int> MergeArrays(const vector<vector<int>>& S) {
   return ret;
 }
 // @exclude
-#endif  // SOLUTIONS_MERGE_SORTED_ARRAYS_H_
 
 */
+#endif  // SOLUTIONS_MERGE_SORTED_ARRAYS_H_
