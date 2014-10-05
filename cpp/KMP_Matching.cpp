@@ -41,11 +41,14 @@ int match2(string s,string p){
 	for(size_t i=1;i<l2;i++){
 		k = T[i-1];
 		while(k && p[k]!=p[i])
-			k=T[k+1];	
+			k=T[k];	
 		if(p[k]==p[i])
 			k++;
 		T[i]=k;
 	}	
+	for(auto k:T)
+		cout<<k<<" ";
+	cout<<endl;
 	k=0;
 	for(size_t i=0;i<l1;i++){
 		while(k && s[i]!=p[k])
