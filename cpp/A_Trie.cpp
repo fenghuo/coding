@@ -39,7 +39,7 @@ private:
 
 int main(){
 	Trie trie;
-	string s1="abcdefgh";
-	trie.insert(s1);
+	trie.insert("abcdefgh");
+	trie.insert("abdefg");
 	cout<<trie.prefix("abc")<<endl;
 }
