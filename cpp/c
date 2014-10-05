@@ -1,0 +1,11 @@
+git commit -am "coding epi"
+git push
+
+clear
+echo ${1}
+g++ --std=c++11 ${1}
+
+echo -e "\e[31m----------------------running-----------------------\e[0m"
+./a.out
+echo -e "\e[31m----------------------done-----------------------\e[0m"
+
