@@ -40,7 +40,10 @@ int match2(string s,string p){
 	int k=0;
 	for(size_t i=1;i<l2;i++){
 		while(k && p[k]!=p[i])
+		{
 			k=T[k-1];	
+			cout<<k<<endl;
+		}
 		if(p[k]==p[i])
 			k++;
 		T[i]=k;
