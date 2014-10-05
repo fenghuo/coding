@@ -63,7 +63,7 @@ int match2(string s,string p){
 
 int main(){
 	string s="ababsdfsdfccababcadsfsdf";
-	string p="abababcababa";
+	string p="acdefacdacdefd";
 	cout<<match2(s,p)<<endl;
 	cout<<(match2(s,p)==s.find(p))<<endl;
 }
