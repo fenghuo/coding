@@ -39,7 +39,6 @@ int match2(string s,string p){
 	vector<size_t> T(l2,0);
 	int k=0;
 	for(size_t i=1;i<l2;i++){
-		k = T[i-1];
 		while(k && p[k]!=p[i])
 			k=T[k-1];	
 		if(p[k]==p[i])
