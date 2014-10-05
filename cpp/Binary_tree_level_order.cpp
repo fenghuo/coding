@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
   // should output 3
   //               2 5
   //               1 4 6
-  PrintBinaryTreeDepthOrder(root);
+  S_PrintBinaryTreeDepthOrder(root);
   vector<vector<int>> golden_res = {{3}, {2, 5}, {1, 4, 6}};
   assert(golden_res.size() == results.size() &&
          equal(golden_res.begin(), golden_res.end(), results.begin()));
