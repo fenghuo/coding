@@ -14,6 +14,10 @@ using std::length_error;
 
 // @include
 class Queue {
+
+}
+
+class S_Queue {
  public:
   void Enqueue(int x) { A_.Push(x); }
 

@@ -54,3 +54,28 @@ class Queue {
 };
 // @exclude
 #endif  // SOLUTIONS_QUEUE_WITH_MAX_USING_DEQUE_H_
+
+
+Class A_Queue{
+private:
+	queue<int> Q;
+	deque<int> M;
+public:
+	void enqeue(int&v){
+		Q.push(v);
+		while(!M.empty() && M.back()<v)
+			M.pop_back();
+		M.push_back(v);
+	}
+
+	void dequeue(int&v){
+		auto top=Q.top();
+		Q.pop();
+		if(top==M.front())
+			M.pop_front();
+	}
+	
+	int max(){
+		return M.front();
+	}
+}
