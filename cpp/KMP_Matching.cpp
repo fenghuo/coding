@@ -41,7 +41,7 @@ int match2(string s,string p){
 	for(size_t i=1;i<l2;i++){
 		k = T[i-1];
 		while(k && p[k]!=p[i])
-			k=T[k];	
+			k=T[k-1];	
 		if(p[k]==p[i])
 			k++;
 		T[i]=k;
