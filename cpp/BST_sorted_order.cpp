@@ -26,7 +26,7 @@ void PrintBSTInSortedOrder(const unique_ptr<BSTNode<int>>& r) {
 			curr=curr->left.get();
 		} else {
 			curr = s.top();
-			cout<< curr->data <<endl;
+			cout<< curr->data 
 			result.push_back(curr->data);
 			curr=curr->right.get();
 		}
