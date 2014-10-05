@@ -15,8 +15,7 @@ int* countingSort(int*A,int n){
 }
 
 int main(){
-	cout<<11;
-	int A[20]={4,3,2,1,4,5,6,7,6,3,2,1,2,4,5,1,2,3,4};
+	int A[20]={2,1,4,5,6,7,6,3,2,1,2,4,5,1,2,3,4};
 	int * B=countingSort(A,20);
 	for(int i=0;i<20;i++)
 		cout<<B[i]<<" ";
