@@ -4,8 +4,10 @@
 
 using namespace std;
 
+struct MAP{
+	unordered_map<char,MAP*> m;
+}
 
 int main(){
 
-	unordered_map<int,int> * p = new unordered_map();
 }
