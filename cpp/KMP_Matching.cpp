@@ -35,7 +35,7 @@ int match(string s,string p){
 }
 
 int main(){
-	string s="ababsdfsdfccababcadsfsdf";
+	string s="ababsdfsdfccababxcadsfsdf";
 	string p="ababca";
 	cout<<(match(s,p)==s.find(p))<<endl;
 }
