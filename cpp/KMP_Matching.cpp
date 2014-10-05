@@ -34,8 +34,32 @@ int match(string s,string p){
 	return j==lp?i-j:-1;
 }
 
+int match2(string s,string p){
+	size_t l1=s.size(),l2=p.size();
+	vector<size_t> T(l2,0);
+	int k=0;
+	for(size_t i=1;i<l2;i++){
+		k = T[i-1];
+		while(k && p[k]!=p[i])
+			k=T[k-1];	
+		if(p[k]==p[i])
+			k++;
+		T[i]=k;
+	}	
+	k=0;
+	for(size_t i=0;i<l1;i++){
+		while(k && s[i]!=p[k])
+			k=p[k];
+		if(s[i]==p[k])
+			k++;
+		if(k==l2)
+			return (i+1-k);
+	}
+	return -1;
+}
+
 int main(){
 	string s="ababsdfsdfccababxcadsfsdf";
 	string p="ababca";
-	cout<<(match(s,p)==s.find(p))<<endl;
+	cout<<(match2(s,p)==s.find(p))<<endl;
 }
