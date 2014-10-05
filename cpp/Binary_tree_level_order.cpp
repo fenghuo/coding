@@ -82,8 +82,8 @@ int main(int argc, char* argv[]) {
       new BinaryTreeNode<int>{5, nullptr, nullptr});
   root->right->left = unique_ptr<BinaryTreeNode<int>>(
       new BinaryTreeNode<int>{4, nullptr, nullptr});
-  root->right->right = unique_ptr<BinaryTreeNode<int>>(
-      new BinaryTreeNode<int>{6, nullptr, nullptr});
+  //root->right->right = unique_ptr<BinaryTreeNode<int>>(
+  //    new BinaryTreeNode<int>{6, nullptr, nullptr});
   // should output 3
   //               2 5
   //               1 4 6
