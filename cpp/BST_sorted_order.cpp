@@ -23,12 +23,12 @@ void PrintBSTInSortedOrder(const unique_ptr<BSTNode<int>>& r) {
 	while(!s.empty() || curr){
 		if(curr) {
 			s.push(curr);
-			curr=curr->left;
+			curr=curr->left.get();
 		} else {
 			curr = s.top();
 			cout<< curr->data <<endl;
 			result.push_back(curr->data);
-			curr=curr->right;
+			curr=curr->right.get();
 		}
 
 	}
