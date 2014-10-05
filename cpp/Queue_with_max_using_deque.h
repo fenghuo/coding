@@ -56,7 +56,7 @@ class Queue {
 #endif  // SOLUTIONS_QUEUE_WITH_MAX_USING_DEQUE_H_
 
 
-Class A_Queue{
+class A_Queue{
 private:
 	queue<int> Q;
 	deque<int> M;
@@ -78,4 +78,4 @@ public:
 	int max(){
 		return M.front();
 	}
-}
+};
