@@ -69,7 +69,7 @@ public:
 	}
 
 	void dequeue(int&v){
-		auto top=Q.top();
+		auto top=Q.front();
 		Q.pop();
 		if(top==M.front())
 			M.pop_front();
