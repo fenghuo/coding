@@ -41,5 +41,7 @@ int main(){
 	Trie trie;
 	trie.insert("abcdefgh");
 	trie.insert("abdefg");
+	trie.insert("abdefg");
+	trie.insert("abdefg");
 	cout<<trie.prefix("abdee")<<endl;
 }
