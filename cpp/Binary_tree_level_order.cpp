@@ -21,6 +21,26 @@ vector<int> one_line_result;
 
 // @include
 void PrintBinaryTreeDepthOrder(const unique_ptr<BinaryTreeNode<int>>& root) {
+	queue<BinaryTreeNode<int>*> q;
+	q.push(root.get());
+	int count = q.size();
+	while(!q.empty()){
+		auto curr = q.front();
+		q.pop();	
+		count--;
+		if(curr){
+			cout<<curr->data<<" ";
+			q.push(curr->left.get());
+			q.push(curr->right.get());	
+		}
+		if(count==0){
+			cout<<endl;	
+			count=q.size();
+		}
+
+	}
+}
+void S_PrintBinaryTreeDepthOrder(const unique_ptr<BinaryTreeNode<int>>& root) {
   queue<BinaryTreeNode<int>*> q;
   q.emplace(root.get());
   size_t count = q.size();
