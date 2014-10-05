@@ -26,6 +26,21 @@ BinaryTreeNode<int>* LCA(const unique_ptr<BinaryTreeNode<int>>& T,
   }
   return l_res ? l_res : r_res;
 }
+
+/**
+TreeNode* LCA(TreeNode*root, set<TreeNode*>&nodes){
+	if(root==nullptr)
+		return nullptr;
+	if(nodes.count(root))
+		return root;
+	auto left = LCA(root->left,nodes),right = LCA(root->right,nodes);
+	if(left && right)
+		return root;
+	else
+		return left?left:right;
+
+}
+*/
 // @exclude
 
 int main(int argc, char* argv[]) {
