@@ -17,8 +17,8 @@ public:
 		auto* p = root;
 		for(const auto & c:s){
 			if(!p->m.count(c))
-				(*p)[c]=new MAP();
-			p=(*p)[c];
+				p->m[c]=new MAP();
+			p=p->m[c];
 		}
 	}
 	string prefix(const string&s){
@@ -27,7 +27,7 @@ public:
 		for(const auto & c:s){
 			if(p->m.count(c)){
 				pre+=c;
-				p=(*p)[c];
+				p=p->m[c];
 			} else
 				break;
 		}
