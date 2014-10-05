@@ -31,7 +31,7 @@ int match(string s,string p){
 		}
 	}
 	cout<<i<<" - "<<j<<endl;
-	return j==lp?-1:i-j;
+	return j==lp?i-j:-1;
 }
 
 int main(){
