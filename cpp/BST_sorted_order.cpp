@@ -18,6 +18,23 @@ vector<int> result;
 
 // @include
 void PrintBSTInSortedOrder(const unique_ptr<BSTNode<int>>& r) {
+	stack<BSTNode<int>*> s;
+	auto curr = r.get();
+	while(!s.empty() || curr){
+		if(curr) {
+			s.push(curr);
+			curr=curr->left;
+		} else {
+			curr = s.top();
+			cout<< curr->data <<endl;
+			result.push_back(curr->data);
+			curr=curr->right;
+		}
+
+	}
+}
+
+void S_PrintBSTInSortedOrder(const unique_ptr<BSTNode<int>>& r) {
   stack<const BSTNode<int>*> s;
   const BSTNode<int>* curr = r.get();
 
