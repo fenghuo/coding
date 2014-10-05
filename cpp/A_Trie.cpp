@@ -6,7 +6,7 @@ using namespace std;
 
 struct MAP{
 	unordered_map<char,MAP*> m;
-}
+};
 
 int main(){
 
