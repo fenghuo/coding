@@ -19,6 +19,28 @@ using std::vector;
 int Partition(int left, int right, int pivot, vector<int>* A);
 
 // @include
+int f(vector<int> & A,int k, int s, int e){
+	if(s==e)
+		return -1;
+	else {
+		int p=0;
+		for(int i=s+1;i<e;i++)
+			if(A[i]<A[0])
+				swap(A[++p],A[i]);
+		swap(A[0],A[p]);
+		if(p+1 == k )
+			return A[p];
+		else if (p+1 < k)
+			return f(A,k-p-1,p+1,e);
+		else
+			return f(A,k,s,p);
+	}
+
+}
+int FindKthLargest(vector<int> A, int k) {
+	return f(A,k,0,A.size());
+}
+
 int FindKthLargest(vector<int> A, int k) {
   int left = 0, right = A.size() - 1;
 
