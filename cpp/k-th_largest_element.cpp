@@ -64,7 +64,6 @@ int FindKthLargest(vector<int> A, int k) {
 			k-=n;
 		} else 
 			e=p;
-		cout<<s<<" "<<e<<" "<<p<<endl;
 	}
 	return -1;
 }
@@ -129,6 +128,7 @@ int main(int argc, char* argv[]) {
     }
     int result = FindKthLargest(A, k);
     nth_element(A.begin(), A.begin() + A.size() - k, A.end());
+	cout<<result<<endl;
     assert(result == A[A.size() - k]);
   }
   return 0;
