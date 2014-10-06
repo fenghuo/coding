@@ -17,6 +17,11 @@ int Compare(double a, double b);
 
 // @include
 double SquareRoot(double x) {
+
+
+}
+
+double S_SquareRoot(double x) {
   // Decides the search range according to x.
   double l, r;
   if (Compare(x, 1.0) < 0) {  // x < 1.0.
