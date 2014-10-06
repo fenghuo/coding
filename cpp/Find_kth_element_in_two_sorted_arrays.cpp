@@ -55,7 +55,7 @@ T FindKthInTwoSortedArrays(
   }
 }
 */
-int S_FindKthInTwoSortedArrays(const vector<int>& A, const vector<int>& B,
+int FindKthInTwoSortedArrays(const vector<int>& A, const vector<int>& B,
                              int k) {
 	if(k<0 || k> A.size()+B.size())
 		return -1;
@@ -63,7 +63,7 @@ int S_FindKthInTwoSortedArrays(const vector<int>& A, const vector<int>& B,
 	int a=max(k-l2,0),b=min(k,l1);
 	while(a<=b){
 		int x=a+(b-a)/2;
-		int i=x-1,y=k-x-1;
+		int i=x-1,j=k-x-1;
 		if((j>=0 && i<l1 && A[i+1]<B[j]))
 			a=x+1;
 		else if((i>=0 && j<l2 && B[j+1]<A[i]))
