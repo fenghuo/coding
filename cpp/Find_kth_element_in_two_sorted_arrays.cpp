@@ -159,7 +159,7 @@ int main(int argc, char* argv[]) {
   small_test();
   default_random_engine gen((random_device())());
   // Random test 10000 times.
-  for (int times = 0; times < 10000; ++times) {
+  for (int times = 0; times < 1000; ++times) {
     vector<int> A, B;
     int n, m, k;
     if (argc == 3) {
