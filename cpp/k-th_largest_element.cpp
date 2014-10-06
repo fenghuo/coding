@@ -61,7 +61,7 @@ int FindKthLargest(vector<int> A, int k) {
 			return A[p];
 		else if(n<k){
 			s=p+1;
-			k-=n+1;
+			k-=n;
 		} else 
 			e=p;
 	}
