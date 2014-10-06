@@ -19,13 +19,16 @@ void com(const vector<int>& max_heap, int&larger,int&equal,int k,int x,int idx) 
 		return; 
 	if(max_heap[idx]>x)
 		larger++;
-	else if(max_heap[idx]==x)
+	else if(max_heap[idx]==x){
 		equal++;
+		if(equal>=k)
+			return;
+	}
 	com(max_heap,larger,equal,k,x,idx*2+1);
 	com(max_heap,larger,equal,k,x,idx*2+2);
 }
 
-int A_CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
+int CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
 	int larger=0,equal=0;
 	com(max_heap,larger,equal,k,x,0);	
 	if(larger>=k)
@@ -36,7 +39,7 @@ int A_CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
 		return -1;
 }
 
-int CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
+int S_CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
   int larger = 0, equal = 0;
   CompareKthLargestHeapHelper(max_heap, k, x, 0, &larger, &equal);
   return larger >= k ? 1 : (larger + equal >= k ? 0 : -1);
@@ -85,5 +88,8 @@ int main(int argc, char* argv[]) {
     assert(1 == CompareKthLargestHeap(max_heap, 2, 4));   // expect larger
     assert(1 == CompareKthLargestHeap(max_heap, 2, 3));   // expect larger
   }
+
+	vector<int> heap= {};
+
   return 0;
 }
