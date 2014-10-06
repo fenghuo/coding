@@ -28,10 +28,11 @@ int f(vector<int> & A,int k, int s, int e){
 			if(A[i]>A[s])
 				swap(A[++p],A[i]);
 		swap(A[s],A[p]);
-		if(p+1 == k )
+		int n=p-s+1;
+		if( n == k )
 			return A[p];
-		else if (p+1 < k)
-			return f(A,k-p-1,p+1,e);
+		else if (n < k)
+			return f(A,k-n,p+1,e);
 		else
 			return f(A,k,s,p);
 	}
