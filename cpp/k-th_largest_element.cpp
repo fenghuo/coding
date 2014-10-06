@@ -64,6 +64,7 @@ int FindKthLargest(vector<int> A, int k) {
 			k-=n;
 		} else 
 			e=p;
+		cout<<s<<" "<<e<<endl;
 	}
 	return -1;
 }
