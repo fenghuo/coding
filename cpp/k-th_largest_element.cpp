@@ -25,7 +25,7 @@ int f(vector<int> & A,int k, int s, int e){
 	else {
 		int p=0;
 		for(int i=s+1;i<e;i++)
-			if(A[i]<A[0])
+			if(A[i]>A[0])
 				swap(A[++p],A[i]);
 		swap(A[0],A[p]);
 		if(p+1 == k )
