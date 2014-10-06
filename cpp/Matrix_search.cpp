@@ -31,6 +31,7 @@ bool MatrixSearch(const vector<vector<int>>& A, int x) {
 		for(int j=b;j<=n;j++)
 			if(A[i][j]==x)
 				return true;
+	cout<<"false"<<endl;
 	return false;
 }
 
