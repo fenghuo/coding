@@ -16,6 +16,21 @@ using std::vector;
 
 // @include
 int SearchFirst(const vector<int>& A, int k) {
+	int a=0,b=A.size()-1,found=-1;
+	while(a<=b){
+		int m=a+(b-a)/2;
+		if(A[m]<k)
+			a=m+1;
+		else{
+			b=m-1;
+			if(A[m]==k)
+				found=m;
+		}
+	}
+	return found;
+}
+
+int S_SearchFirst(const vector<int>& A, int k) {
   int l = 0, r = A.size() - 1, res = -1;
   while (l <= r) {
     int m = l + ((r - l) / 2);
