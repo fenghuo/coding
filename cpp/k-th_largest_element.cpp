@@ -23,11 +23,11 @@ int f(vector<int> & A,int k, int s, int e){
 	if(s>=e)
 		return -1;
 	else {
-		int p=0;
+		int p=s;
 		for(int i=s+1;i<e;i++)
-			if(A[i]>A[0])
+			if(A[i]>A[s])
 				swap(A[++p],A[i]);
-		swap(A[0],A[p]);
+		swap(A[s],A[p]);
 		if(p+1 == k )
 			return A[p];
 		else if (p+1 < k)
