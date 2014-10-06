@@ -19,7 +19,7 @@ bool MatrixSearch(const vector<vector<int>>& A, int x) {
 	int m=A.size()-1;
 	int n=A[0].size()-1;		
 	int a=0,b=0;
-	while((m-a) && (n-b)){
+	while((m-a) || (n-b)){
 		if(A[m][n] == x)
 			return true;
 		else if( A[m][b] > x )
@@ -27,10 +27,6 @@ bool MatrixSearch(const vector<vector<int>>& A, int x) {
 		else
 			b++;
 	}
-	for(int i=a;i<=m;i++)
-		for(int j=b;j<=n;j++)
-			if(A[i][j]==x)
-				return true;
 	return false;
 }
 
