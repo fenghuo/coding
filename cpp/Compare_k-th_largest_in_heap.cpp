@@ -13,7 +13,30 @@ void CompareKthLargestHeapHelper(const vector<int>& max_heap, int k, int x,
 
 // @include
 // -1 means smaller, 0 means equal, and 1 means larger.
+
+void com(const vector<int>& max_heap, int&larger,int&equal,int k,int x,int idx) {
+	if(idx>=max_heap.size() || max_heap[idx]<x || larger>k )
+		return; 
+	if(max_heap[idx]>x)
+		larger++;
+	else if(max_heap[idx]==x)
+		equal++;
+	com(max_heap,larger,equal,k,x,idx*2+1);
+	com(max_heap,larger,equal,k,x,idx*2+2);
+}
+
 int CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
+	int larger=0,equal=0;
+	com(max_heap,larger,equal,k,x,0);	
+	if(larger>=k)
+		return 1;
+	else if(larger+equal>=k)
+		return 0;
+	else
+		return -1;
+}
+
+int S_CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
   int larger = 0, equal = 0;
   CompareKthLargestHeapHelper(max_heap, k, x, 0, &larger, &equal);
   return larger >= k ? 1 : (larger + equal >= k ? 0 : -1);
