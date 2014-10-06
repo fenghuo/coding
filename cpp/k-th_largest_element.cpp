@@ -41,7 +41,7 @@ int FindKthLargest(vector<int> A, int k) {
 	return f(A,k,0,A.size());
 }
 
-int FindKthLargest(vector<int> A, int k) {
+int S_FindKthLargest(vector<int> A, int k) {
   int left = 0, right = A.size() - 1;
 
   while (left <= right) {
