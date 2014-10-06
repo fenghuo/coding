@@ -31,7 +31,7 @@ int CompareKthLargestHeap(const vector<int>& max_heap, int k, int x) {
 	if(larger>=k)
 		return 1;
 	else if(larger+equal>=k)
-		return 0;
+		return 2;
 	else
 		return -1;
 }
