@@ -105,6 +105,7 @@ int main(int argc, char* argv[]) {
     }
     int result = FindKthLargest(A, k);
     nth_element(A.begin(), A.begin() + A.size() - k, A.end());
+	cout<<" - "<<A[A.size()-K]<<endl;
     assert(result == A[A.size() - k]);
   }
   return 0;
