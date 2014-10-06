@@ -38,7 +38,10 @@ int f(vector<int> & A,int k, int s, int e){
 
 }
 int FindKthLargest(vector<int> A, int k) {
-	return f(A,k,0,A.size());
+	
+	int t=f(A,k,0,A.size());
+	cout<<t<<endl;
+	return t;
 }
 
 int S_FindKthLargest(vector<int> A, int k) {
