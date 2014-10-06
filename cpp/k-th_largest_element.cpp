@@ -20,7 +20,7 @@ int Partition(int left, int right, int pivot, vector<int>* A);
 
 // @include
 int f(vector<int> & A,int k, int s, int e){
-	if(s==e)
+	if(s>=e)
 		return -1;
 	else {
 		int p=0;
@@ -38,7 +38,6 @@ int f(vector<int> & A,int k, int s, int e){
 
 }
 int FindKthLargest(vector<int> A, int k) {
-	
 	int t=f(A,k,0,A.size());
 	cout<<t<<endl;
 	return t;
