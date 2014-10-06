@@ -31,7 +31,6 @@ bool MatrixSearch(const vector<vector<int>>& A, int x) {
 		for(int j=b;j<=n;j++)
 			if(A[i][j]==x)
 				return true;
-	cout<<"false"<<endl;
 	return false;
 }
 
@@ -90,6 +89,7 @@ int main(int argc, char* argv[]) {
     }
     uniform_int_distribution<int> x_dis(0, 999);
     int x = x_dis(gen);
+    cout<<MatrixSearch(A, x)<<endl;
     assert(BruteForceSearch(A, x) == MatrixSearch(A, x));
   }
   return 0;
