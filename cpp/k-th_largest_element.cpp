@@ -38,13 +38,35 @@ int f(vector<int> & A,int k, int s, int e){
 	}
 
 }
-int FindKthLargest(vector<int> A, int k) {
-	cout<<1111<<endl;
+int A_FindKthLargest(vector<int> A, int k) {
 	int t=f(A,k,0,A.size());
-	cout<<t<<endl;
 	return t;
 }
 
+int part(vector<int>&A,int s,int e){
+	int p=s;
+	for(int i=s+1;i<e;i++)
+		if(A[i]>A[s])
+			swap(A[++p],A[i]);
+	swap(A[p],A[s]);
+	return p;
+}
+
+int FindKthLargest(vector<int> A, int k) {
+	int s=0,e=A.size();
+	while(s<e){
+		int p=part(A,s,e);
+		int n=p-s+1;
+		if(n == k)
+			return A[p];
+		else if(n<k){
+			s=p+1;
+			k-=n+1;
+		} else 
+			e=p;
+	}
+	return -1;
+}
 int S_FindKthLargest(vector<int> A, int k) {
   int left = 0, right = A.size() - 1;
 
@@ -106,7 +128,6 @@ int main(int argc, char* argv[]) {
     }
     int result = FindKthLargest(A, k);
     nth_element(A.begin(), A.begin() + A.size() - k, A.end());
-	cout<<" - "<<A[A.size()-k]<<endl;
     assert(result == A[A.size() - k]);
   }
   return 0;
