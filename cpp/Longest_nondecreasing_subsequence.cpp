@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     cout << "n = " << n << endl;
     int ret_length = LNS_nlogn::LongestNondecreasingSubsequence(A);
     vector<int> output = LNS_n2::LongestNondecreasingSubsequence(A);
-    cout<<ret_length<<endl;
+    cout<<ret_length<<" "<<output.size()<<endl;
     assert(ret_length == output.size());
   }
   return 0;
