@@ -23,7 +23,9 @@ int LongestNondecreasingSubsequence(const vector<int>& A) {
 		*p=A[i];
 		mx=max((int)(p-start+1),mx);
 	}
-	cout<<" - "<<mx<<endl;
+	for(int i=0;i<mx;i++)
+		cout<<seq[i]<<" ";
+	cout<<endl;
 	return mx;
 }
 
