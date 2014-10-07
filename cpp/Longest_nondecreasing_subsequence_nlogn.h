@@ -12,7 +12,7 @@ using namespace std;
 namespace LNS_nlogn {
 
 // @include
-int LongestNondecreasingSubsequence(const vector<int>& A) {
+int A_LongestNondecreasingSubsequence(const vector<int>& A) {
 	int l=A.size();
 	vector<int> seq(l+2, numeric_limits<int>::max());
 	auto start = seq.begin();
@@ -50,7 +50,7 @@ int LongestNondecreasingSubsequence(const vector<int>& A) {
 
 
 
-int S_LongestNondecreasingSubsequence(const vector<int>& A) {
+int LongestNondecreasingSubsequence(const vector<int>& A) {
   vector<int> tail_values;
   for (const int& a : A) {
     auto it = upper_bound(tail_values.begin(), tail_values.end(), a);
