@@ -24,20 +24,18 @@ int main(int argc, char *argv[]) {
     if (argc == 2) {
       n = atoi(argv[1]);
     } else {
-      uniform_int_distribution<int> dis(1, 1000);
+      uniform_int_distribution<int> dis(1, 10);
       n = dis(gen);
     }
     for (int i = 0; i < n; ++i) {
       uniform_int_distribution<int> dis(0, 99);
       A.emplace_back(dis(gen));
     }
-	/*
     for (int i = 0; i < A.size(); ++i) {
       cout << A[i] << ' ';
     }
     cout << endl;
     cout << "n = " << n << endl;
-	*/
     int ret_length = LNS_nlogn::LongestNondecreasingSubsequence(A);
     vector<int> output = LNS_n2::LongestNondecreasingSubsequence(A);
     cout<<ret_length<<" "<<output.size()<<endl;
