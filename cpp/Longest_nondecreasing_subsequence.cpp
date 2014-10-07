@@ -31,12 +31,11 @@ int main(int argc, char *argv[]) {
       uniform_int_distribution<int> dis(0, 99);
       A.emplace_back(dis(gen));
     }
-    /*
+    /
     for (int i = 0; i < A.size(); ++i) {
       cout << A[i] << ' ';
     }
     cout << endl;
-    */
     cout << "n = " << n << endl;
     int ret_length = LNS_nlogn::LongestNondecreasingSubsequence(A);
     vector<int> output = LNS_n2::LongestNondecreasingSubsequence(A);
