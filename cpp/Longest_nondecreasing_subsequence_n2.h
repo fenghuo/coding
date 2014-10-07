@@ -4,8 +4,10 @@
 #define SOLUTIONS_LONGEST_NONDECREASING_SUBSEQUENCE_N2_H_
 
 #include <vector>
+#include <algorithm>
 
-using std::vector;
+
+using namespace std;
 
 namespace LNS_n2 {
 
