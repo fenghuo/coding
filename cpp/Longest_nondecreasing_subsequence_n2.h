@@ -17,7 +17,7 @@ vector<int> LongestNondecreasingSubsequence(const vector<int>& A) {
 	vector<int> seq(l,1);
 	for(int i=1;i<l;i++)
 		for(int j=0;j<i;j++)
-			if(A[i]>=A[j])
+			if(A[i]>A[j])
 				seq[i]=max(seq[j]+1,seq[i]);
 	int mx=1;
 	for(int i=0;i<l;i++)
