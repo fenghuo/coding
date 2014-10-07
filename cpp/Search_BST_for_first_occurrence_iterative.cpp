@@ -9,6 +9,10 @@ using std::unique_ptr;
 
 // @include
 BSTNode<int>* FindFirstEqualK(const unique_ptr<BSTNode<int>>& T, int k) {
+	
+}
+
+BSTNode<int>* S_FindFirstEqualK(const unique_ptr<BSTNode<int>>& T, int k) {
   BSTNode<int>* first = nullptr, *curr = T.get();
   while (curr) {
     if (curr->data < k) {

@@ -44,7 +44,12 @@ struct ArrData {
   int val;
 };
 
+
 int FindMinDistanceSortedArrays(const vector<vector<int>>& arrs) {
+		
+}
+
+int S_FindMinDistanceSortedArrays(const vector<vector<int>>& arrs) {
   // Pointers for each of arrs.
   vector<int> idx(arrs.size(), 0);
   int min_dis = numeric_limits<int>::max();
