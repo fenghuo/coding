@@ -31,7 +31,6 @@ int main(int argc, char *argv[]) {
       uniform_int_distribution<int> dis(0, 99);
       A.emplace_back(dis(gen));
     }
-    /
     for (int i = 0; i < A.size(); ++i) {
       cout << A[i] << ' ';
     }
