@@ -11,6 +11,16 @@ namespace LNS_n2 {
 
 // @include
 vector<int> LongestNondecreasingSubsequence(const vector<int>& A) {
+	int l=A.size();
+	vector<int> seq(l,1);
+	for(int i=1;i<l;i++)
+		for(int j=0;j<i;j++)
+			if(A[i]>=A[j])
+				seq[i]=max(seq[j]+1,seq[i]);
+	return seq[l-1];
+}
+
+vector<int> S_LongestNondecreasingSubsequence(const vector<int>& A) {
   // Empty array.
   if (A.empty() == true) {
     return A;
