@@ -24,11 +24,11 @@ int main(int argc, char *argv[]) {
     if (argc == 2) {
       n = atoi(argv[1]);
     } else {
-      uniform_int_distribution<int> dis(1, 10000);
+      uniform_int_distribution<int> dis(1, 100);
       n = dis(gen);
     }
     for (int i = 0; i < n; ++i) {
-      uniform_int_distribution<int> dis(0, 99999999);
+      uniform_int_distribution<int> dis(0, 99);
       A.emplace_back(dis(gen));
     }
     /*
