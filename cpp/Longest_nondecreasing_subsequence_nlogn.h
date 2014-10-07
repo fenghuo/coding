@@ -20,7 +20,7 @@ int LongestNondecreasingSubsequence(const vector<int>& A) {
 	for(int i=0;i<l;i++){
 		auto p=lower_bound(start,start+l+2,A[i]);
 		*p=A[i];
-		mx=max(p-start+1,mx);
+		mx=max((int)(p-start+1),mx);
 	}
 	return mx;
 }
