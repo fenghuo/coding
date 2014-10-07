@@ -18,8 +18,8 @@ int LongestNondecreasingSubsequence(const vector<int>& A) {
 	auto start = seq.begin();
 	int mx=0;
 	for(int i=0;i<l;i++){
-		auto p=upper_bound(start,start+l+2,A[i]);
-		if(i && A[i]==*(p-1))
+		auto p=lower_bound(start,start+l+2,A[i]);
+		if(i && A[i]<=*(p-1))
 			continue;
 		*p=A[i];
 		mx=max((int)(p-start+1),mx);
