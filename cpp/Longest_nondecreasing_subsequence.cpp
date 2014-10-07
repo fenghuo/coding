@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     if (argc == 2) {
       n = atoi(argv[1]);
     } else {
-      uniform_int_distribution<int> dis(1, 100);
+      uniform_int_distribution<int> dis(1, 100000);
       n = dis(gen);
     }
     for (int i = 0; i < n; ++i) {
