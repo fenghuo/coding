@@ -19,7 +19,7 @@ struct File;
   vector<string>  getSubDirectories(string rootPath);
 
   struct File{
-    bool operator==(const File&r){
+    bool operator==(const File&r) const {
       File l=*this;
       string linput="",rinput="";
       while(linput!=END_OF_FILE && rinput!=END_OF_FILE){
@@ -44,7 +44,7 @@ struct File;
   
 
   struct Hash{
-    size_t operator()(const File&file){
+    size_t operator()(const File&file) const {
       size_t hashCode=0;
       string input="";
 	hash<string> string_hash;
