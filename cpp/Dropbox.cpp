@@ -10,16 +10,13 @@ using namespace std;
 
 string END_OF_FILE = "end";
 
-struct File;
-
   // get line for File and return END_OF_FILE if reaches the end of File
-  string getLine(const File File){return "";}
+  string getLine(const File File);
   // get File names from a directory
-  vector<string>  getFileNamesFromRootPath(string rootPath){return {};}
+  vector<string>  getFileNamesFromRootPath(string rootPath);
   // get sub directories from a directory
-  vector<string>  getSubDirectories(string rootPath){return {};}
-  
-  
+  vector<string>  getSubDirectories(string rootPath);
+
   struct File{
     bool operator==(const File&r){
       File l=*this;
@@ -33,6 +30,15 @@ struct File;
       return linput==rinput;
     }
   };
+
+  // get line for File and return END_OF_FILE if reaches the end of File
+  string getLine(const File File){return "";}
+  // get File names from a directory
+  vector<string>  getFileNamesFromRootPath(string rootPath){return {};}
+  // get sub directories from a directory
+  vector<string>  getSubDirectories(string rootPath){return {};}
+  
+  
 
   struct Hash{
     size_t operator()(const File&File){
