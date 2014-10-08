@@ -14,7 +14,7 @@ struct String{
 	bool operator==(const String&right) const {
 		return s==right.s;
 	}
-	ostream&operator<<(ostream&os, const String&s){
+	ostream&operator<<(ostream&os){
 		os<<s;
 		return os;
 	}
