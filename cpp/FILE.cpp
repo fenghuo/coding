@@ -38,7 +38,7 @@ int main(){
 	string s;
 	int p=0;
 	unordered_map<String,int,Hash> dict;
-	priority_queue<string, vector<string>, Compare > pq;
+	priority_queue<string, > pq(Compare());
 	while(getline(in,s))
 		pq.push(s);
 	while(!pq.empty()){
