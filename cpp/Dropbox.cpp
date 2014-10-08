@@ -45,8 +45,9 @@ struct File;
     size_t operator()(const File&File){
       size_t hashCode=0;
       string input="";
+	hash<string> string_hash;
       while(input!=END_OF_FILE){
-        hashCode^=hash<string>(input);
+        hashCode^=string_hash(input);
         input=getLine(r);
       }
       return hashCode;

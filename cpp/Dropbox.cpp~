@@ -10,6 +10,7 @@ using namespace std;
 
 string END_OF_FILE = "end";
 
+struct File;
   // get line for File and return END_OF_FILE if reaches the end of File
   string getLine(const File File);
   // get File names from a directory
@@ -44,8 +45,9 @@ string END_OF_FILE = "end";
     size_t operator()(const File&File){
       size_t hashCode=0;
       string input="";
+	hash<string> string_hash;
       while(input!=END_OF_FILE){
-        hashCode^=hash<string>(input);
+        hashCode^=(input);
         input=getLine(r);
       }
       return hashCode;
