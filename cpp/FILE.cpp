@@ -31,7 +31,7 @@ struct Compare{
 	bool operator<(const string&l, const string&r){
 		return l>r;
 	}
-}
+};
 
 int main(){
 	ifstream in("t");
