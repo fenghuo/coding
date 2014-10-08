@@ -83,7 +83,7 @@ struct File;
     for(auto name:names)
       Files.push_back(getFileFromFileName(name));
     names.insert(names.end(), this_names.begin(), this_names.end());
-    files.insert(files.end(), this_files.begin(), this_files.end());
+    files.insert(files.end(), this_files.begin(), this_Files.end());
     for(auto dir:directPath){
       findAllFiles(dir, names,Files);
     }
