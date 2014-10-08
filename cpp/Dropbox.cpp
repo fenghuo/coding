@@ -10,6 +10,7 @@ using namespace std;
 
 string END_OF_FILE = "end";
 
+struct File;
   // get line for File and return END_OF_FILE if reaches the end of File
   string getLine(const File File);
   // get File names from a directory
