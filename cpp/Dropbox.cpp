@@ -75,6 +75,28 @@ struct File;
       }
       return res;
   }
+
+  vector<vector<string> > findDuplicates2(const vector<string>&names, const vector<File>&Files){
+      unordered_map<long, unordered_map<File, size_t idx> > dict;
+      unordered_map<File, vector<size_t>, Hash> dict;
+      vector<vector<string> > res;
+      for(size_t i=0;i<Files.size();i++){
+	  
+          if(dict.count(Files[i])){
+            auto group = dict[Files[i]];
+            group.push_back(i);
+          } else {
+            dict[Files[i]] = {i};
+          }
+      }
+      for(auto entry:dict){
+          vector<string> fnames;
+          for(auto idx:entry.second)
+            fnames.push_back(names[idx]);
+          res.push_back(fnames);
+      }
+      return res;
+  }
   
   void findAllFiles(string rootPath,vector<string>&names, vector<File>&Files){
     vector<string> this_names = getFileNamesFromRootPath(rootPath);
