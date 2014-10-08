@@ -4,6 +4,7 @@
 #include<map>
 #include<unordered_map>
 #include<functional>
+#include<priority_queue>
 
 
 using namespace std;
@@ -31,9 +32,10 @@ int main(){
 	string s;
 	int p=0;
 	unordered_map<String,int,Hash> dict;
+	priority_queue<string> pq;
 	while(getline(in,s))
-		dict[String(s)]=++p;
-	for(auto entry:dict)
-		cout<<entry.first.s<<" - "<<entry.second<<" : "<<dict.hash_function()(entry.first)<<endl;
+		pq.push(s);
+	for(auto s:pq)
+		cout<<s<<endl;
 	return 0;
 }
