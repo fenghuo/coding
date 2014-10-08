@@ -28,7 +28,7 @@ struct Hash{
 };
 
 struct Compare{
-	bool operator<(const string&l, const string&r){
+	bool operator()(const string&l, const string&r){
 		return l==r;
 	}
 };
