@@ -35,7 +35,9 @@ int main(){
 	priority_queue<string> pq;
 	while(getline(in,s))
 		pq.push(s);
-	for(auto s:pq)
-		cout<<s<<endl;
+	while(!pq.empty()){
+		cout<<pq.top()<<endl;
+		pq.pop();
+	}
 	return 0;
 }
