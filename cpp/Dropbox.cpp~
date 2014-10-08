@@ -48,7 +48,7 @@ struct File;
       size_t hashCode=0;
       string input="";
 	hash<string> string_hash;
-      while(input! = END_OF_FILE){
+      while(input!= END_OF_FILE){
         hashCode^ = string_hash(input);
         input = getLine(file);
       }

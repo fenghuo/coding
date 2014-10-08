@@ -49,7 +49,7 @@ struct File;
       string input="";
 	hash<string> string_hash;
       while(input!= END_OF_FILE){
-        hashCode^ = string_hash(input);
+        hashCode^= string_hash(input);
         input = getLine(file);
       }
       return hashCode;
