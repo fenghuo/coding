@@ -30,7 +30,7 @@ int main(){
 	ifstream in("t");
 	string s;
 	int p=0;
-	unordered_map<string,int,Hash> dict;
+	unordered_map<String,int,Hash> dict;
 	while(getline(in,s))
 		dict[String(s)]=++p;
 	for(auto entry:dict)
