@@ -42,7 +42,7 @@ struct File;
   
 
   struct Hash{
-    size_t operator()(const File&File){
+    size_t operator()(const File&file){
       size_t hashCode=0;
       string input="";
 	hash<string> string_hash;
@@ -61,9 +61,8 @@ struct File;
           if(dict.count(Files[i])){
             auto group = dict[Files[i]];
             group.push_back(i);
-            found = true;
           } else {
-            dict[Files[i] = {i};
+            dict[Files[i]] = {i};
           }
       }
       for(auto entry:dict){
