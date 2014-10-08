@@ -11,7 +11,8 @@ using namespace std;
 string END_OF_FILE = "end";
 
   struct File{
-    bool operator==(const File&l,const File&r){
+    bool operator==(const File&r){
+      File l=*this;
       string linput="",rinput="";
       while(linput!=END_OF_FILE && rinput!=END_OF_FILE){
         if(linput!=rinput)
