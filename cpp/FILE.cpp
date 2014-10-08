@@ -15,8 +15,8 @@ struct String{
 	bool operator==(const String&right) const {
 		return s==right.s;
 	}
-	ostream&operator<<(ostream&os){
-		os<<s;
+	friend ostream&operator<<(ostream&os, String&S){
+		os<<S.s;
 		return os;
 	}
 };
@@ -40,7 +40,7 @@ int main(){
 	unordered_map<String,int,Hash> dict;
 	priority_queue<string, vector<string>,Compare> pq;
 	while(getline(in,s))
-		pq.push(s);
+		pq.push(String(s));
 	while(!pq.empty()){
 		cout<<pq.top()<<endl;
 		pq.pop();
