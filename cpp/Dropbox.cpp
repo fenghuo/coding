@@ -60,10 +60,10 @@ struct File;
       for(size_t i=0;i<Files.size();i++){
           if(dict.count(Files[i])){
             auto group = dict[Files[i]];
-            group.push(i);
+            group.push_back(i);
             found = true;
           } else {
-            dict[hasCode] = {i};
+            dict[Files[i] = {i};
           }
       }
       for(auto entry:dict){
@@ -80,9 +80,9 @@ struct File;
     vector<File> this_Files;
     vector<string> directPath = getSubDirectories(rootPath);
     for(auto name:names)
-      Files.push_back(getFileFromFileName)
+      Files.push_back(getFileFromFileName(name));
     names.append(this_names);
-    fils.append(this_Files);
+    files.append(this_Files);
     for(auto dir:directPath){
       findAllFiles(dir, names,Files);
     }
