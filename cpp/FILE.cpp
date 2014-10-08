@@ -34,6 +34,6 @@ int main(){
 	while(getline(in,s))
 		dict[String(s)]=++p;
 	for(auto entry:dict)
-		cout<<entry.first<<" - "<<entry.second<<" : "<<dict.hash_function()(entry.first)<<endl;
+		cout<<entry.first.s<<" - "<<entry.second<<" : "<<dict.hash_function()(entry.first)<<endl;
 	return 0;
 }
