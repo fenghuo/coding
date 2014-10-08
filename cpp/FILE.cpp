@@ -21,7 +21,7 @@ struct String{
 };
 
 struct Hash{
-	size_t operator()(const string&s) const{
+	size_t operator()(const String&s) const{
 		return 1;
 	}
 };
