@@ -13,8 +13,8 @@ struct String{
 	String(string s):s(s){}
 	bool operator==(const String&right) const {
 		return s==right.s;
-	}	
-	ostream&operator<<(ostream&os, const String s){
+	}
+	ostream&operator<<(ostream&os, const String&s){
 		os<<s;
 		return os;
 	}
