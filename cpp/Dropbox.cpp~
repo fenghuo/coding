@@ -38,17 +38,19 @@ struct File;
   vector<string>  getFileNamesFromRootPath(string rootPath){return {};}
   // get sub directories from a directory
   vector<string>  getSubDirectories(string rootPath){return {};}
+  // 
+  File getFileFromFileName(string name){return File();}
   
   
 
   struct Hash{
-    size_t operator()(const File&File){
+    size_t operator()(const File&file){
       size_t hashCode=0;
       string input="";
 	hash<string> string_hash;
-      while(input!=END_OF_FILE){
-        hashCode^=string_hash(input);
-        input=getLine(File);
+      while(input! = END_OF_FILE){
+        hashCode^ = string_hash(input);
+        input = getLine(file);
       }
       return hashCode;
     }
@@ -80,8 +82,8 @@ struct File;
     vector<string> directPath = getSubDirectories(rootPath);
     for(auto name:names)
       Files.push_back(getFileFromFileName(name));
-    names.append(this_names);
-    files.append(this_Files);
+    names.insert(names.end(), this_names.begin(), this_names.end());
+    files.insert(files.end(), this_files.begin(), this_files.end());
     for(auto dir:directPath){
       findAllFiles(dir, names,Files);
     }
