@@ -18,7 +18,7 @@ struct String{
 		os<<s;
 		return os;
 	}
-}
+};
 
 struct Hash{
 	size_t operator()(const string&s) const{
