@@ -8,17 +8,8 @@
 
 using namespace std;
 
-struct File{};
-
-  // get line for File and return EOF if reaches the end of File
-  string getLine(const File File){return "";}
-  // get File names from a directory
-  vector<string>  getFileNamesFromRootPath(string rootPath){return {};}
-  // get sub directories from a directory
-  vector<string>  getSubDirectories(string rootPath){return {};}
-  
-  struct Compare{
-    bool operator==()(const File&l,const File&r){
+  struct File{
+    bool operator==(const File&l,const File&r){
       string linput="",rinput="";
       while(linput!=EOF && rinput!=EOF){
         if(linput!=rinput)
@@ -29,6 +20,14 @@ struct File{};
       return linput==rinput;
     }
   };
+
+  // get line for File and return EOF if reaches the end of File
+  string getLine(const File File){return "";}
+  // get File names from a directory
+  vector<string>  getFileNamesFromRootPath(string rootPath){return {};}
+  // get sub directories from a directory
+  vector<string>  getSubDirectories(string rootPath){return {};}
+  
   
   struct Hash{
     size_t operator()(const File&File){
