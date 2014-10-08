@@ -3,6 +3,7 @@
 #include<string>
 #include<map>
 #include<unordered_map>
+#include<functional>
 
 using namespace std;
 
@@ -14,6 +15,6 @@ int main(){
 	while(getline(in,s))
 		dict[s]=++p;
 	for(auto entry:dict)
-		cout<<entry.first<<" - "<<entry.second<<endl;
+		cout<<entry.first<<" - "<<entry.second<<" : "<<hash<string>()(entry.first)<<endl;
 	return 0;
 }
