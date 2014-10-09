@@ -24,12 +24,13 @@ struct File{
 	File(string&s):path(s){}
 	bool operator==(const File&file) const{
 		ifstream left(path),right(file.path);
+		istream li=left,ri=right;
 		string l="",r="";
-		while(left && right){
+		while(li && ri){
 			if(l!=r)
 				return false;	
-			left=getline(left,l);
-			right=getline(right,r);
+			li=getline(left,l);
+			ri=getline(right,r);
 		}
 		return lc == lr;
 	}
