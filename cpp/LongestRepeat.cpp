@@ -1,4 +1,5 @@
 #include<iostream>
+#include <cstdlib>
 #include<ctime>
 #include<algorithm>
 #include<vector>
@@ -69,7 +70,7 @@ int main(){
 		s="";
 		auto start=time(0);
 		for(int i=0;i<n;i++)
-			s+=(i%26+'a');
+			s+=(rand()%26+'a');
 		
 		cout<<"  -- "<<(time(0)-start)<<" -- "<<endl;
 		start=time(0);
