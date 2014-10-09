@@ -16,7 +16,7 @@ using namespace std;
 
 size_t getFileSize(const string&file){return 0;}
 size_t readFile(const string&file){return 0;}
-vector<string> getFiles(string s){return {};}
+vector<string> getFiles(string s){return {"a","b"};}
 vector<string> getDirs(string s){return {};}
 
 struct File{
@@ -91,5 +91,10 @@ vector<vector<string> > findDuplicatedFiles(string root){
 }
 
 int main(){
-
+	auto res=findDuplicatedFiles("/");
+	for(auto&l:res){
+		for(auto&s:l)
+			cout<<s",";
+		cout<<endl;
+	}
 }
