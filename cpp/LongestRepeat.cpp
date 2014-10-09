@@ -68,7 +68,9 @@ int main(){
 		s="";
 		for(int i=0;i<n;i++)
 			s+=(i%26+'a');
-		cout<<find(s)<<endl;
-		cout<<find2(s)<<endl;
+		find(s);
+		cout<<"  -- 1 -- "<<endl;
+		find2(s);
+		cout<<"  -- 2 -- "<<endl;
 	}
 }
