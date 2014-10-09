@@ -13,7 +13,7 @@ string find(string&S){
 	Trie root;
 	int max=0;
 	int start=0;
-	vector<Trie*> pointers={&root};
+	vector<Trie*> pointers={};
 	for(size_t i=0;i<S.size();i++){
 		auto*curr=&root;
 		for(int j=i;j<S.size();j++){
@@ -29,8 +29,8 @@ string find(string&S){
 			curr=curr->m[S[j]];
 		}
 	}
-	for(auto p:pointers);
-		//delete p;
+	for(auto p:pointers)
+		delete p;
 	return S.substr(start,max);
 }
 
