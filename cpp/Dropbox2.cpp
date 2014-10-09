@@ -52,7 +52,7 @@ vector<vector<string> > findDuplicatedFiles(const vector<string>&files){
 	vector<vector<string> > res;
 	for(auto&path:files){
 		size_t size= getFileSize(path);
-		if(!fileSize.count(size())
+		if(!fileSize.count(size))
 			fileSize[size]={};
 		fileSize[size].push_back(path);
 	}
