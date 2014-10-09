@@ -21,7 +21,7 @@ vector<string> getDirs(string s){return {};}
 
 struct File{
 	string path;
-	File(string&s):path(s){}
+	File(string s):path(s){}
 	bool operator==(const File&file) const{
 		ifstream left(path),right(file.path);
 		string l="",r="";
