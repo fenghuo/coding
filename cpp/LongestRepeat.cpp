@@ -29,8 +29,8 @@ string find(string&S){
 			curr=curr->m[S[j]];
 		}
 	}
-	for(auto p:pointers)
-		delete p;
+	for(auto p:pointers);
+		//delete p;
 	return S.substr(start,max);
 }
 
