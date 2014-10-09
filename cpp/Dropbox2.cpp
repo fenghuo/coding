@@ -94,7 +94,7 @@ int main(){
 	auto res=findDuplicatedFiles("/");
 	for(auto&l:res){
 		for(auto&s:l)
-			cout<<s",";
+			cout<<s<<",";
 		cout<<endl;
 	}
 }
