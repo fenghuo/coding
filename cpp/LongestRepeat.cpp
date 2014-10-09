@@ -66,6 +66,7 @@ string find2(string&S){
 int main(){
 	string s;
 	int n;
+	cout<<sizeof(Trie)<<endl;
 	while(cin>>n){
 		s="";
 		auto start=time(0);
