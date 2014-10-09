@@ -25,12 +25,11 @@ struct File{
 	bool operator==(const File&file) const{
 		ifstream left(path),right(file.path);
 		string l="",r="";
-		int lc=1,lr=1;
-		while(lc && lr){
+		while(left && right){
 			if(l!=r)
 				return false;	
-			lc=getline(left,l);
-			rc=getline(right,r);
+			left=getline(left,l);
+			right=getline(right,r);
 		}
 		return lc == lr;
 	}
