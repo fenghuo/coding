@@ -45,7 +45,7 @@ struct Compare{
 string find2(string&S){
 	vector<char*> ps;
 	int max=0,j=0;
-	size_t start=0;
+	char* start;
 	for(auto&s:S)
 		ps.push_back(&s);
 	sort(ps.begin(),ps.end(),Compare());
@@ -55,10 +55,10 @@ string find2(string&S){
 				break;	
 		if(j>max){
 			max=j;
-			start=i;
+			start=ps[i];
 		}
 	}
-	return S.substr(start,max);
+	return string(start,max);
 }
 
 int main(){
