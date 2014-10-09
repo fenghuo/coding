@@ -44,13 +44,21 @@ struct Compare{
 
 string find2(string&S){
 	vector<char*> ps;
+	int max=0,j=0;
+	size_t start=0;
 	for(auto&s:S)
 		ps.push_back(&s);
 	sort(ps.begin(),ps.end(),Compare());
-	for(auto*p:ps)
-		cout<<p<<endl;
-
-	return S;
+	for(size_t i=1;i<ps.size();i++){
+		for(j=0;j<strlen(ps[i]);j++)
+			if(ps[i][j]!=ps[i-1][j])
+				break;	
+		if(j>max){
+			max=j;
+			start=i;
+		}
+	}
+	return S.substr(start,max);
 }
 
 int main(){
