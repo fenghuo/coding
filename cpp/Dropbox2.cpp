@@ -16,7 +16,7 @@ using namespace std;
 
 size_t getFileSize(const string&file){return 0;}
 size_t readFile(const string&file){return 0;}
-vector<string> getFiles(string s){return {"a","b"};}
+vector<string> getFiles(string s){return {"a","b","t","t"};}
 vector<string> getDirs(string s){return {};}
 
 struct File{
