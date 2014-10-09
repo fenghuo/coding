@@ -64,7 +64,7 @@ vector<vector<string> > findDuplicatedFiles(const vector<string>&files){
 				File f(path);
 				if(!dict.count(f))
 					dict[f]={};
-				dict[f].push_back(fs);
+				dict[f].push_back(path);
 			}
 			for(auto&d:dict){
 				auto&sameFiles=d.second;
