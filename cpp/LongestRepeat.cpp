@@ -67,7 +67,7 @@ int main(){
 	while(cin>>n){
 		s="";
 		for(int i=0;i<n;i++)
-			s+=i%128;
+			s+=(i%26+'a');
 		cout<<find(s)<<endl;
 		cout<<find2(s)<<endl;
 	}
