@@ -38,7 +38,7 @@ struct Compare{
 	bool operator()(const char*l, const char*r) const{
 		return strcmp(l,r)<0;
 	}
-}
+};
 
 string find2(string&S){
 	vector<char*> ps;
