@@ -34,8 +34,14 @@ string find(string&S){
 	return S.substr(start,max);
 }
 
+string find2(string&S){
+	vector<char*> ps(S.begin(),S.end());
+
+	return S;
+}
+
 int main(){
 	string s;
 	while(getline(cin,s))
-		cout<<find(s)<<endl;
+		cout<<find2(s)<<endl;
 }
