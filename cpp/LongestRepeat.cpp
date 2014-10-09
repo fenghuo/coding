@@ -68,6 +68,8 @@ int main(){
 		s="";
 		for(int i=0;i<n;i++)
 			s+=(i%26+'a');
+		
+		cout<<"  -- 0 -- "<<endl;
 		find(s);
 		cout<<"  -- 1 -- "<<endl;
 		find2(s);
