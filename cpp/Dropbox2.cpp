@@ -12,6 +12,8 @@
 #include<vector>
 #include<unordered_map>
 
+using namespace std;
+
 size_t getFileSize(const string&file){return 0;}
 size_t readFile(const string&file){return 0;}
 vector<string> getFiles(string s){return {};}
