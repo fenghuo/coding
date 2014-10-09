@@ -20,7 +20,7 @@ void change(int sum, vector<int>&changes, vector<int>&path){
 } 
 
 int main(){
-	vector<int> changes={2,3,7};
+	vector<int> changes={2,3,7,11,17};
 	vector<int> path;
-	change(20,changes,path);
+	change(100,changes,path);
 }
