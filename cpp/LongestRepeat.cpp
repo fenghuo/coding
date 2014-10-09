@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Trie{
+struct Trie{
 	unordered_map<char, Trie*> m;
 };
 
