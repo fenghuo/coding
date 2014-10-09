@@ -34,12 +34,19 @@ string find(string&S){
 	return S.substr(start,max);
 }
 
+struct Compare{
+	bool operator()(const char*l, const char*r) const{
+		return strcmp(l,r)<0;
+	}
+}
+
 string find2(string&S){
 	vector<char*> ps;
-	for(auto s:S)
+	for(auto&s:S)
 		ps.push_back(&s);
-	for(auto*s:ps)
-		cout<<s<<endl;
+	sort(ps.begin(),ps.end(),Compare());
+	for(auto*p:ps)
+		cout<<p<<endl;
 
 	return S;
 }
