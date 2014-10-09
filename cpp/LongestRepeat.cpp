@@ -38,6 +38,8 @@ string find2(string&S){
 	vector<char*> ps;
 	for(auto&s:S)
 		ps.push_back(&s);
+	for(auto*s:ps)
+		cout<<s<<endl;
 
 	return S;
 }
