@@ -35,7 +35,9 @@ string find(string&S){
 }
 
 string find2(string&S){
-	vector<char*> ps(S.begin(),S.end());
+	vector<char*> ps;
+	for(auto&s:S)
+		ps.push_back(&s);
 
 	return S;
 }
