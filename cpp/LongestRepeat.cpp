@@ -36,6 +36,6 @@ string find(string&S){
 
 int main(){
 	string s;
-	getline(cin,s);
-	cout<<find(s)<<endl;
+	while(getline(cin,s))
+		cout<<find(s)<<endl;
 }
