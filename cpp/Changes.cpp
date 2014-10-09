@@ -10,6 +10,8 @@ void change(int sum, vector<int>&changes, vector<int>&path){
 		cout<<endl;
 	} else if(sum>0){
 		for(auto i:changes){
+			if(path.size() && i<path.back())
+				continue;
 			path.push_back(i);
 			change(sum-i,changes,path);
 			path.pop_back();
