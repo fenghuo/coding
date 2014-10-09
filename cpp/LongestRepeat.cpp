@@ -2,6 +2,7 @@
 #include<algorithm>
 #include<vector>
 #include<string>
+#include<cstring>
 #include<unordered_map>
 
 using namespace std;
