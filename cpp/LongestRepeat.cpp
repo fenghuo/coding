@@ -63,6 +63,12 @@ string find2(string&S){
 
 int main(){
 	string s;
-	while(getline(cin,s))
+	int n;
+	while(cin>>n){
+		s="";
+		for(int i=0;i<n;i++)
+			s+=i%128;
+		cout<<find(s)<<endl;
 		cout<<find2(s)<<endl;
+	}
 }
