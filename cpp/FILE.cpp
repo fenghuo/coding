@@ -39,8 +39,8 @@ int main(){
 	int p=0;
 	unordered_map<String,int,Hash> dict;
 	priority_queue<string, vector<string>,Compare> pq;
-	String s("ts");
-	cout<<s<<endl;
+	String T("ts");
+	cout<<T<<endl;
 	while(getline(in,s))
 		pq.push(string(s));
 	while(!pq.empty()){
