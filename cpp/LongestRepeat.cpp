@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ctime>
 #include<algorithm>
 #include<vector>
 #include<string>
@@ -66,13 +67,16 @@ int main(){
 	int n;
 	while(cin>>n){
 		s="";
+		auto start=time(0);
 		for(int i=0;i<n;i++)
 			s+=(i%26+'a');
 		
-		cout<<"  -- 0 -- "<<endl;
+		cout<<"  -- "<<(start=time(0)-start)<<" -- "<<endl;
 		find(s);
 		cout<<"  -- 1 -- "<<endl;
+		cout<<"  -- "<<(start=time(0)-start)<<" -- "<<endl;
 		find2(s);
 		cout<<"  -- 2 -- "<<endl;
+		cout<<"  -- "<<(start=time(0)-start)<<" -- "<<endl;
 	}
 }
