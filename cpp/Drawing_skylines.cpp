@@ -175,7 +175,9 @@ int main(int argc, char* argv[]) {
     }
     vector<Skyline> ans = drawing_skylines(A);
     vector<Skyline> S_ans = S_drawing_skylines(A);
-    for(size_t i=0;i<S_ans.size();i++){
+	
+	cout<<ans.size()<<" . "<<S_ans.size()<<endl;
+    for(size_t i=10;i<ans.size();i++){
 	cout<<"left: "<<ans[i].left<<" - "<<ans[i].height<<" - "<<ans[i].right<<endl;
 	cout<<"righ: "<<S_ans[i].left<<" - "<<S_ans[i].height<<" - "<<S_ans[i].right<<endl;
 	cout<<endl;
