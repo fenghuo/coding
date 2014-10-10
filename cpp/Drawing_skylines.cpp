@@ -78,7 +78,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			cout<<p.left->valid<<" ? "<<endl;
 			p.left->valid=false;
 			cout<<p.left->valid<<" ? "<<endl;
-			for(auto&s:points)if(s.pos==p.left->pos)cout<<&s<<","<<p.left<<endl;
+			for(size_t i=0;i<points.size();i++)if(points[i].pos==p.left->pos)cout<<&(points[i])<<","<<p.left<<endl;
 			while(!pq.empty() && !pq.top().valid){
 				pq.pop();
 				cout<<pq.size()<<" = "<<endl;
