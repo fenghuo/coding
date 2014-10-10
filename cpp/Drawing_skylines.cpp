@@ -75,6 +75,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		} else {
 			p.left->valid=false;
+			cout<<p.left->start<<" ? "<<endl;
 			for(auto&s:points)if(s.start)cout<<s.valid<<",";cout<<endl;
 			while(!pq.empty() && !pq.top().valid){
 				pq.pop();
