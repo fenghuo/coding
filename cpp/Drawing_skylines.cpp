@@ -160,7 +160,7 @@ int main(int argc, char* argv[]) {
     if (argc == 2) {
       n = atoi(argv[1]);
     } else {
-      uniform_int_distribution<int> dis(1, 5000);
+      uniform_int_distribution<int> dis(1, 5);
       n = dis(gen);
     }
     vector<Skyline> A;
@@ -174,6 +174,12 @@ int main(int argc, char* argv[]) {
       A.emplace_back(Skyline{left, right, height});
     }
     vector<Skyline> ans = drawing_skylines(A);
+    vector<Skyline> S_ans = S_drawing_skylines(A);
+    for(size_t i=0;i<ans.size();i++){
+	cout<<"left: "<<ans[i].left<<" - "<<ans[i].height<<" - "<<ans[i].right<<endl;
+	cout<<"righ: "<<S_ans[i].left<<" - "<<S_ans[i].height<<" - "<<S_ans[i].right<<endl;
+	cout<<endl;
+    }
     cout << "n = " << n << endl;
     // Just check there is no overlap.
     for (int i = 0; i < ans.size(); ++i) {
