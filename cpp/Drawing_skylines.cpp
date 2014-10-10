@@ -75,7 +75,6 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		} else {
 			p.left->valid=false;
-			cout<<"false"<<endl;
 			while(!pq.empty() && !pq.top().valid){
 				pq.pop();
 				cout<<pq.size()<<" = "<<endl;
@@ -88,6 +87,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		}
 	}
+	cout<<pq.size()<<endl;
 	return res;
 }
 
