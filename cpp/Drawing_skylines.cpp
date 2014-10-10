@@ -45,13 +45,8 @@ struct Endpoint{
 };
 
 struct Compare{
-	bool operator<(const Endpoint&l,const Endpoint&r) const{
+	bool operator()(const Endpoint&l,const Endpoint&r) const{
 		return l.height<r.height;
-	}
-};
-struct Hash{
-	size_t operator()(const Endpoint&l) const{
-		return hash<int>()(l.pos);
 	}
 };
 // 21:48
