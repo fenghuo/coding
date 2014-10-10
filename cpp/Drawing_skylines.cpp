@@ -82,7 +82,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		}
 	}
-
+	return res;
 }
 
 vector<Skyline> S_drawing_skylines(vector<Skyline> skylines) {
