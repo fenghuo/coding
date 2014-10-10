@@ -25,6 +25,7 @@
 using namespace std;
 
 // 17:29
+// 17:59 
 vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails){
 	unordered_map<string, int> emailIndex;
 	unordered_map<int, set<string> > indexNames;
@@ -63,7 +64,7 @@ vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails)
 
 int main(){
 	vector<string> names={"1","2","3","4","5","6"};
-	vector<vector<string> > emails={{"a"},{"b"},{"c"},{"a","c","d"},{"e"},{"f"}};
+	vector<vector<string> > emails={{"a","c"},{"b"},{"c"},{"a","c","d"},{"e"},{"f"}};
 	auto res=group(names,emails);
 	for(auto&e:res){
 		for(auto&s:e)
