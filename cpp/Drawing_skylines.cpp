@@ -62,6 +62,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 	}
 	points[1].left->valid=false;
 	cout<<points[0].valid<<" --- "<<endl;
+	cout<<points[1].left<<endl<<&points[0]<<endl;
 	sort(points.begin(),points.end());
 	int pos=0;
 	int height=0;
