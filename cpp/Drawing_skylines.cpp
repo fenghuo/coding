@@ -75,8 +75,10 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		} else {
 			p.left->valid=false;
-			while(!pq.empty() && !pq.top().valid)
+			while(!pq.empty() && !pq.top().valid){
 				pq.pop();
+				cout<<pq.size()<<" = "<<endl;
+			}
 			if(pq.empty() || pq.top().height<height){
 				if(height && p.pos-pos)
 					res.push_back(Skyline{pos, p.pos, height});
