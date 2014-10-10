@@ -25,7 +25,69 @@ struct Skyline {
   int left, right, height;
 };
 
+struct Endpoint{
+	int pos;
+	int height;
+	bool start;
+	bool valid;
+	Endpoint(int a,int b,bool c):pos(a),height(b),start(c),valid(true){}
+
+	bool operator<(const Endpoint&r) const{
+		return pos<r.pos;
+	}
+	
+	bool operator==(const Endpoint&r) const{
+		return pos==r.pos;
+	}
+};
+
+struct Compare{
+	bool operator<(const Endpoint&l,const Endpoint&r) const{
+		return l.height<r.height;
+	}
+};
+struct Hash{
+	size_t operator()(const Endpoint&l) const{
+		return hash<int>()(l.pos);
+	}
+};
+// 21:48
 vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
+	vector<Endpoint> points;
+	vector<Skyline> res;
+	priority_queue<Endpoint, vector<Endpoint>, Compare> pq;
+	for(auto&line:skylines){
+		points.push_back(Endpoint(line.left,line.height,true));
+		points.push_back(Endpoint(line.right,line.height,false));
+	}
+	sort(points.begin(),points.end());
+	int pos=0;
+	int height=0;
+	for(auto&p:points){
+		if(p.start){
+			pq.emplace(p);
+			if (pq.top().height>height){
+				if(height && p.pos-pos)
+					res.push_back(Skyline{pos, p.pos, height});
+				pos=p.pos;
+				height=p.height;
+			}
+		} else {
+			p.valid=false;
+			while(!pq.empty() && !pq.top().valid)
+				pq.pop();
+			if(pq.empty() || pq.top().height<height){
+				if(height && p.pos-pos)
+					res.push_back(Skyline{pos, p.pos, height});
+				pos=p.pos;
+				height=pq.empty()?0:pq.top().height;
+			}
+		}
+	}
+
+}
+
+vector<Skyline> S_drawing_skylines(vector<Skyline> skylines) {
   return DrawingSkylinesHelper(skylines, 0, skylines.size());
 }
 
