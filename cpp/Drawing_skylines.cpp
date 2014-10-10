@@ -74,7 +74,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 				height=p.height;
 			}
 		} else {
-			p->left.valid=false;
+			p.left->valid=false;
 			while(!pq.empty() && !pq.top().valid)
 				pq.pop();
 			if(pq.empty() || pq.top().height<height){
