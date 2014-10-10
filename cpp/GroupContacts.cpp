@@ -56,6 +56,8 @@ vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails)
 
 		}
 	}
+	for(auto&s:indexNames)
+		res.push_back(s);
 	return res;
 }
 
