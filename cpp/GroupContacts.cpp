@@ -46,7 +46,7 @@ vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails)
 						emailIndex[e]=index;
 						for(auto&n:indexNames[old])
 							indexNames[index].insert(n);
-						indexName.erase[indexName.find(e)];
+						indexNames.erase(indexName.find(e));
 					}
 
 				} else
