@@ -61,6 +61,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 	sort(points.begin(),points.end());
 	int pos=0;
 	int height=0;
+	cout<<points.size()<<endl;
 	for(auto&p:points){
 		if(p.start){
 			pq.emplace(p);
@@ -160,7 +161,7 @@ int main(int argc, char* argv[]) {
     if (argc == 2) {
       n = atoi(argv[1]);
     } else {
-      uniform_int_distribution<int> dis(1, 5);
+      uniform_int_distribution<int> dis(1, 15);
       n = dis(gen);
     }
     vector<Skyline> A;
@@ -177,6 +178,7 @@ int main(int argc, char* argv[]) {
     vector<Skyline> S_ans = S_drawing_skylines(A);
 	
 	cout<<ans.size()<<" . "<<S_ans.size()<<endl;
+	return;
     for(size_t i=10;i<ans.size();i++){
 	cout<<"left: "<<ans[i].left<<" - "<<ans[i].height<<" - "<<ans[i].right<<endl;
 	cout<<"righ: "<<S_ans[i].left<<" - "<<S_ans[i].height<<" - "<<S_ans[i].right<<endl;
