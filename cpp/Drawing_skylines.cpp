@@ -58,7 +58,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 	for(auto&line:skylines){
 		points.push_back(Endpoint(line.left,line.height,true));
 		points.push_back(Endpoint(line.right,line.height,false));
-		points[points.size()-1].left=&points[points.size()-2];
+		points[points.size()-1].left=&(points[points.size()-2]);
 	}
 	sort(points.begin(),points.end());
 	int pos=0;
