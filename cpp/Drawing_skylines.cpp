@@ -52,7 +52,7 @@ struct Compare{
 };
 // 21:48
 vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
-	vector<Endpoint> points(skylines.size()*2);
+	vector<Endpoint> points;
 	vector<Skyline> res;
 	priority_queue<Endpoint, vector<Endpoint>, Compare> pq;
 	for(auto&line:skylines){
@@ -61,6 +61,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 		points[points.size()-1].left=&(points[points.size()-2]);
 		cout<<points.capacity()<<endl;
 	}
+	points.resize(skylines.size()*2);
 	points[1].left->valid=false;
 	cout<<points[0].valid<<" --- "<<endl;
 	cout<<points[1].left<<endl<<&points[0]<<endl;
