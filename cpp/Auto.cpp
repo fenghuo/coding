@@ -4,9 +4,11 @@
 using namespace std;
 
 int main(){
-	vector<int> s={1,2,3,4,5};
-	for(auto t:s)
-		t=1;
+	vector<int> s;
+	for(int i=0;i<10;i++){
+		s.push_back(i);
+		cout<<&i<<endl;
+	}
 	for(auto t:s)
 		cout<<t<<",";
 
