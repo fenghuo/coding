@@ -59,7 +59,6 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 		points.push_back(Endpoint(line.left,line.height,true));
 		points.push_back(Endpoint(line.right,line.height,false));
 		points[points.size()-1].left=&(points[points.size()-2]);
-		break;
 	}
 	points[1].left->valid=false;
 	cout<<points[0].valid<<" --- "<<endl;
