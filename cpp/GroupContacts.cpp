@@ -38,7 +38,7 @@ vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails)
 					index=min(index,emailIndex[e]);
 			}
 			if(!indexNames.count(index))
-				indexNames[index]=set<string>();
+				indexNames[index]={};
 			for(auto&e:email){
 				if(emailIndex.count(e)){
 					int old=emailIndex[e];
@@ -56,8 +56,6 @@ vector<set<string> > group(vector<string>&names, vector<vector<string> >&emails)
 
 		}
 	}
-	for(auto&s:indexNames)
-		res.emplace_back(s);
 	return res;
 }
 
