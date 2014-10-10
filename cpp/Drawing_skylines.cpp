@@ -5,6 +5,9 @@
 #include <iostream>
 #include <random>
 #include <vector>
+#include<queue>
+
+using namespace std;
 
 using std::cout;
 using std::default_random_engine;
