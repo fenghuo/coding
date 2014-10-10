@@ -87,7 +87,6 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 			}
 		}
 	}
-	cout<<pq.size()<<endl;
 	return res;
 }
 
