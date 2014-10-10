@@ -33,9 +33,10 @@ struct Endpoint{
 	int height;
 	bool start;
 	bool valid;
-	Endpoint(int a,int b,bool c):pos(a),height(b),start(c),valid(true){}
+	Endpoint*left;
+	Endpoint(int a,int b,bool c):pos(a),height(b),start(c),valid(true),left(NULL){}
 
-	bool operator<(const Endpoint&r) const{
+bool operator<(const Endpoint&r) const{
 		return pos<r.pos;
 	}
 	
@@ -57,6 +58,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 	for(auto&line:skylines){
 		points.push_back(Endpoint(line.left,line.height,true));
 		points.push_back(Endpoint(line.right,line.height,false));
+		points[points.size()-1].left=&points[points.size()-2];
 	}
 	sort(points.begin(),points.end());
 	int pos=0;
@@ -72,7 +74,7 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 				height=p.height;
 			}
 		} else {
-			p.valid=false;
+			p->left.valid=false;
 			while(!pq.empty() && !pq.top().valid)
 				pq.pop();
 			if(pq.empty() || pq.top().height<height){
