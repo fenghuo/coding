@@ -64,7 +64,8 @@ vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
 	int pos=0;
 	int height=0;
 	cout<<points.size()<<endl;
-	for(auto&p:points){
+	for(size_t i=0;i<points.size();i++){
+		Endpoint&p=points[i];
 		if(p.start){
 			pq.emplace(p);
 			if (pq.top().height>height){
