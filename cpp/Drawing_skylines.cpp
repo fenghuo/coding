@@ -52,7 +52,7 @@ struct Compare{
 };
 // 21:48
 vector<Skyline> drawing_skylines(vector<Skyline> skylines) {
-	vector<Endpoint> points;
+	vector<Endpoint> points(skylines.size()*2);
 	vector<Skyline> res;
 	priority_queue<Endpoint, vector<Endpoint>, Compare> pq;
 	for(auto&line:skylines){
