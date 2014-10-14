@@ -82,7 +82,7 @@ using namespace std;
     }
 
 int main(){
-	int a[]={0,-2,-9};
+	int a[]={0,2,-9};
 	cout<<maxProduct(a,2)<<endl;
 }
 
