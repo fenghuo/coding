@@ -63,7 +63,7 @@ using namespace std;
 
                 m=max(m,maxProduct2(A+last,i-last));
 		
-		cout<<m<<endl;
+		cout<<i<<" "<<m<<endl;
 
                 if(i!=n)
 
