@@ -79,6 +79,6 @@ using namespace std;
 
 int main(){
 	int a[]={-2,1,3,-2,-9};
-	cout<<maxProduct(a,2)<<endl;
+	cout<<maxProduct(a,5)<<endl;
 }
 
