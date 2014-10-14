@@ -63,7 +63,6 @@ using namespace std;
 
                 m=max(m,maxProduct2(A+last,i-last));
 		
-		cout<<i<<" "<<m<<endl;
 
                 if(i!=n)
 
@@ -79,7 +78,7 @@ using namespace std;
     }
 
 int main(){
-	int a[]={-2};
-	cout<<maxProduct(a,1)<<endl;
+	int a[]={-2,1,3,-2,-9};
+	cout<<maxProduct(a,2)<<endl;
 }
 
