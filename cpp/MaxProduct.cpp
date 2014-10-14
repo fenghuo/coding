@@ -62,6 +62,8 @@ using namespace std;
             if((i==n || A[i]==0) && i-last)
 
                 m=max(m,maxProduct2(A+last,i-last));
+		
+		cout<<m<<endl;
 
                 if(i!=n)
 
