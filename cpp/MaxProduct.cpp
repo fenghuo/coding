@@ -7,6 +7,9 @@ using namespace std;
 
     int maxProduct2(int A[], int n) {
 
+	if(n<1)
+		return 0;
+
         if(n==1)
 
             return A[0];
@@ -59,7 +62,8 @@ using namespace std;
 
         for(int i=0;i<=n;i++){
 
-            if((i==n || A[i]==0) && i-last){
+	
+            if((i==n || A[i]==0)){
 
                 m=max(m,maxProduct2(A+last,i-last));
 		
