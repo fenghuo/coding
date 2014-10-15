@@ -40,7 +40,7 @@ unordered_map<string,bool> dict;
 
         for(int i=1;i<l;i++)
 
-            if(isScramble(s1.substr(0,i),s2.substr(0,i)) && isScramble(s1.substr(i,l-i),s2.substr(i,l-i))){
+            if(isScramble(s1.substr(0,i),s2.substr(l-i,i)) && isScramble(s1.substr(i,l-i),s2.substr(0,l-i))){
 		dict[check]=true;
                 return true;
 
@@ -51,7 +51,7 @@ unordered_map<string,bool> dict;
     }
 
 int main(){
-	string s1="ccbbcaccbccbbbcca";
-	string s2="ccbbcbbaabcccbccc";
+	string s1="ba";
+	string s2="ab";
 	cout<<isScramble(s1,s2)<<endl;
 }
