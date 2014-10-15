@@ -45,7 +45,7 @@ unordered_map<string,bool> dict;
 
         for(int i=1;i<l;i++)
 
-            if(isScramble(s1.substr(0,i),s2.substr(l-i,i)) && isScramble(s1.substr(i,l-i),s2.substr(0,l-i))){
+            if( (isScramble(s1.substr(0,i),s2.substr(l-i,i)) && isScramble(s1.substr(i,l-i),s2.substr(0,l-i)))|| (isScramble(s1.substr(0,i),s2.substr(0,i)) && isScramble(s1.substr(i,l-i),s2.substr(i,l-i))){
 		dict[s]=true;
                 return true;
 
