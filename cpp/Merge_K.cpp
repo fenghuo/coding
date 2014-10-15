@@ -48,6 +48,9 @@ using namespace std;
             auto&dt=pq.top();
 
             pq.pop();
+		cout<<dt.node->next<<endl;
+
+		break;
 
             if(curr)
 
