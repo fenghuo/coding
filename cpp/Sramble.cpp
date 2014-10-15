@@ -13,8 +13,10 @@ unordered_map<string,bool> dict;
 		for(auto c:s2)
 			count[c]--;
 		for(int i=0;i<256;i++)
-			if(!count[i])
+			if(!count[i]){
+				cout<<"ss "<<c<<endl;
 				return false;
+			}
 		return true;
 		
 	}
