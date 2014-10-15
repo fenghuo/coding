@@ -57,9 +57,9 @@ using namespace std;
 
                 head=curr=dt.node;
 
-            if(dt.node->next)
+       //     if(dt.node->next)
 
-                pq.push(DT(dt.node->next));
+        //        pq.push(DT(dt.node->next));
 
 		cout<<pq.size()<<endl;
 
