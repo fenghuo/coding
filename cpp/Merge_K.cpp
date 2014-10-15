@@ -63,7 +63,7 @@ using namespace std;
 
                 pq.push(DT(dt.node->next));
 
-		cout<<pq.size()<<endl;
+		cout<<pq.size()<<" xx "<<endl;
 
         }
 
