@@ -11,8 +11,10 @@ int&get(){
 }
 
 void t(){
+	int k;
 	for(int i=0;i<100;i++){
-		auto k=get();
+		k=get();
+		k++;
 		char a[100];
 		cout<<k<<endl;
 	}
