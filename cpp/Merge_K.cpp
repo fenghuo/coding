@@ -45,7 +45,7 @@ using namespace std;
 
         while(pq.size()){
 
-            auto&dt=pq.top();
+            auto dt=pq.top();
 
             pq.pop();
 
