@@ -11,7 +11,7 @@ unordered_map<string,bool> dict;
 		for(auto c:s1)
 			count[c]++;
 		for(auto c:s2)
-			count[c]++;
+			count[c]--;
 		for(int i=0;i<256;i++)
 			if(!count[i])
 				return false;
