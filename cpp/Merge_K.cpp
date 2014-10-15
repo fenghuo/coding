@@ -61,6 +61,8 @@ using namespace std;
 
                 pq.push(DT(dt.node->next));
 
+		cout<<pq.size()<<endl;
+
         }
 
         return head;
