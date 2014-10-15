@@ -1,7 +1,10 @@
 #include<iostream>
 #include<string>
+#include<unordered_map> 
 
 using namespace std;
+
+unordered_map<string,bool> dict;
 
 	bool check(string&s1,string&s2){
 		int count[256]={0};
@@ -16,6 +19,8 @@ using namespace std;
 		
 	}
 
+    
+
     bool isScramble(string s1, string s2) {
 	cout<<s1<<" "<<s2<<endl;
 
@@ -27,17 +32,20 @@ using namespace std;
 
             return false;
 
-	if(!check(s1,s2))
-		return false;
+	string check=s1+s2;
+	if(dict.count(check))
+		return dict[check];
 
         int l=s1.size();
 
         for(int i=1;i<l;i++)
 
-            if(isScramble(s1.substr(0,i),s2.substr(0,i)) && isScramble(s1.substr(i,l-i),s2.substr(i,l-i)))
-
+            if(isScramble(s1.substr(0,i),s2.substr(0,i)) && isScramble(s1.substr(i,l-i),s2.substr(i,l-i))){
+		dict[check]=true;
                 return true;
 
+}
+	dict[check]=false;
         return false;
 
     }
