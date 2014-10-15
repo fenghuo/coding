@@ -43,6 +43,11 @@ using namespace std;
 
             pq.push(DT(node));
 
+	cout<<pq.top().node->val<<endl;
+	pq.pop();
+	cout<<pq.top().node->val<<endl;
+	pq.pop();
+
         while(pq.size()){
 
             auto&dt=pq.top();
