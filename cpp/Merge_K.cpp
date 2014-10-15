@@ -50,7 +50,6 @@ using namespace std;
             pq.pop();
 		cout<<dt.node->next<<endl;
 
-		break;
 
             if(curr)
 
