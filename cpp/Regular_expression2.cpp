@@ -3,6 +3,7 @@
 using namespace std;
 
     bool isMatch(const char *s, const char *p) {
+	cout<<s<<" _ "<<p<<endl;
 
         if(!*p)
 
