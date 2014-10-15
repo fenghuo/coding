@@ -20,6 +20,8 @@ using namespace std;
 
             long mid=(l+r)/2;
 
+		cout<<mid<<endl;
+
             if(mid*mid<x)
 
                 l=mid+1;
