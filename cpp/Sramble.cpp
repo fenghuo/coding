@@ -4,6 +4,7 @@
 using namespace std;
 
     bool isScramble(string s1, string s2) {
+	cout<<s1<<" "<<s2<<endl;
 
         if(s1==s2)
 
