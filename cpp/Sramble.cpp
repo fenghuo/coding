@@ -27,7 +27,7 @@ using namespace std;
     }
 
 int main(){
-	string s1="aa";
-	string s2="ab";
+	string s1="ccbbcaccbccbbbcca";
+	string s2="ccbbcbbaabcccbccc";
 	cout<<isScramble(s1,s2)<<endl;
 }
