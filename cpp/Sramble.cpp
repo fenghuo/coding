@@ -3,6 +3,19 @@
 
 using namespace std;
 
+	bool check(string&s1,string&s2){
+		int count[256]={0};
+		for(auto c:s1)
+			count[c]++;
+		for(auto c:s2)
+			count[c]++;
+		for(int i=0;i<256;i++)
+			if(!count[i])
+				return false;
+		return true;
+		
+	}
+
     bool isScramble(string s1, string s2) {
 	cout<<s1<<" "<<s2<<endl;
 
@@ -13,6 +26,9 @@ using namespace std;
         if(s1.size()==1)
 
             return false;
+
+	if(!check(s1,s2))
+		return false;
 
         int l=s1.size();
 
