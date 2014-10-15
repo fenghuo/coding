@@ -10,7 +10,7 @@ using namespace std;
 
         int root=1;
 
-        int l=1,r=1;
+        long l=1,r=1;
 
         while(r*2<x)
 
