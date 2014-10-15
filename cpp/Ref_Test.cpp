@@ -12,7 +12,7 @@ int&get(){
 
 void t(){
 	for(int i=0;i<100;i++){
-		auto& k=get();
+		auto k=get();
 		char a[100];
 		cout<<k<<endl;
 	}
