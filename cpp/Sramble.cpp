@@ -14,9 +14,7 @@ unordered_map<string,bool> dict;
 			count[c]--;
 		for(int i=0;i<256;i++)
 {
-			cout<<(char)i<< " == "<<count[i]<<endl;
-			if(!count[i]){
-				cout<<s1<<" "<<s2<<" -- "<<count[i]<<endl;
+			if(count[i]){
 				return false;
 			}}
 		return true;
