@@ -49,6 +49,9 @@ using namespace std;
 
             pq.pop();
 		cout<<dt.node->next<<endl;
+	
+		if(dt.node->next)
+			break;
 
 
             if(curr)
