@@ -50,7 +50,7 @@ unordered_map<string,bool> dict;
     }
 
 int main(){
-	string s1="abc";
-	string s2="bca";
+	string s1="sqksrqzhhmfmlmqvlbnaqcmebbkqfy";
+	string s2="abbkyfqemcqnblvqmlmfmhhzqrskqs";
 	cout<<isScramble(s1,s2)<<endl;
 }
