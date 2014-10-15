@@ -45,7 +45,7 @@ using namespace std;
 
         while(pq.size()){
 
-            auto dt=pq.top();
+            auto&dt=pq.top();
 
             pq.pop();
 
@@ -58,7 +58,6 @@ using namespace std;
                 head=curr=dt.node;
 
 
-		cout<<dt.node->next<<endl;
             if(dt.node->next)
 
                 pq.push(DT(dt.node->next));
