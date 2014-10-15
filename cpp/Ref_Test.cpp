@@ -4,7 +4,7 @@ using namespace std;
 
 int n=0;
 
-int get(){
+int&get(){
 	n++;
 	int k=n;
 	return k;
