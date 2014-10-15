@@ -57,6 +57,6 @@ unordered_map<string,bool> dict;
 
 int main(){
 	string s1="abc";
-	string s2="bca";
+	string s2="acb";
 	cout<<isScramble(s1,s2)<<endl;
 }
