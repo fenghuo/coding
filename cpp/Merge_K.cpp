@@ -70,6 +70,7 @@ using namespace std;
 int main(){
 	ListNode A(1);
 	ListNode B(1);
-	mergeKLists({&A,&B});
+	vector<ListNode*> C={&A,&B};
+	mergeKLists(C);
 
 }
