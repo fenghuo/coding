@@ -24,11 +24,11 @@ using namespace std;
 
                 if(matrix[i][j]=='0')
 
-                    h[i][j]=0;
+                    r[i][j]=0;
 
                 else
 
-                    h[i][j]=1+(j==n-1?0:h[i][j+1]);
+                    r[i][j]=1+(j==n-1?0:r[i][j+1]);
 
         }
 
@@ -56,7 +56,6 @@ using namespace std;
 
                     l=min(l,h[i][j+k]);
 
-		cout<<" --"<<endl;
 
                     mx=max(mx,l*(k+1));
 
