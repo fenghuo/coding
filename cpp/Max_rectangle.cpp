@@ -56,6 +56,8 @@ using namespace std;
 
                     l=min(l,h[i][j+k]);
 
+		cout<<" --"<<endl;
+
                     mx=max(mx,l*(k+1));
 
                 }
