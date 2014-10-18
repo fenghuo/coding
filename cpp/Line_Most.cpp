@@ -125,5 +125,5 @@ int main(){
 	for(int i=0;i<100;i++)
 		for(int j=i+1;j<10;j++)
 			p.push_back({i,j});
-	maxPoints(p);
+	cout<<maxPoints(p);
 }
