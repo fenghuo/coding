@@ -111,8 +111,6 @@ set<int> s;
                 mx=max(mx,dict[l]);
 
             }
-	cout<<s.size()<< " ++ "<<endl;
-
         return mx;
 
     }
@@ -133,5 +131,6 @@ int main(){
 	for(int i=0;i<100;i++)
 		for(int j=i+1;j<20;j++)
 			p.push_back({i,j});
-	cout<<maxPoints(p)<<endl<<s.size()<<endl;
+	cout<<maxPoints(p)<<endl;
+	cout<<s.size()<<endl;
 }
