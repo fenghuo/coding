@@ -149,7 +149,7 @@ int check(const vector<Point>& P) {
 
     };
 
-    int maxPoints(const vector<Point> &points) {
+    int maxPoints(vector<Point> points) {
 
         unordered_map<Line, int, Hash> dict;
 
