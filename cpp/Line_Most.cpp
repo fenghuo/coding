@@ -75,7 +75,7 @@ using namespace std;
 
             auto h=hash<int>();
 
-            return h(k)^h(b);
+            return h(a.k)^h(a.b);
 
         }  
 
