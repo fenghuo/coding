@@ -99,7 +99,85 @@ int check(const vector<Point>& P) {
 }
 // @include
 
-Line find_line_with_most_points(const vector<Point>& P) {
+    struct Lines{
+
+        Point s,e;
+
+        int k,b;
+
+        Lines(Point x, Point y):s(x),e(y){
+
+            if(s.x==e.x)
+
+                k=0;
+
+            else
+
+                k=(s.y-e.y)/(s.x-e.x);
+
+            b=s.y-k*s.x;
+
+        }
+
+        bool operator==(const Lines&r) const{
+
+            int x1,x2,y1,y2;
+
+            x1=e.x-s.x;
+
+            y1=e.y-s.y;
+
+            x2=r.e.x-r.s.x;
+
+            y2=r.e.y-r.s.y;
+
+            return x1*y2-y1*x2==0;
+
+        }
+
+    };
+
+    struct Hash{
+
+        size_t operator()(const Lines&a) const{
+
+            auto h=hash<int>();
+
+            return h(a.k);
+
+        }  
+
+    };
+
+    int maxPoints(const vector<Point> &points) {
+
+        unordered_map<Line, int, Hash> dict;
+
+        int mx=0;
+
+        for(int i=0;i<points.size();i++)
+
+            for(int j=1;j<points.size();j++){
+
+                Lines l(points[i],points[j]);
+
+                if(dict.count(l))
+
+                    dict[l]++;
+
+                else
+
+                    dict[l]=0;
+
+                mx=max(mx,dict[l]);
+
+            }
+
+        return mx;
+
+    }
+
+Line S_find_line_with_most_points(const vector<Point>& P) {
   // Add all possible lines into hash table.
   unordered_map<Line, unordered_set<Point, HashPoint>, HashLine> table;
   for (int i = 0; i < P.size(); ++i) {
@@ -119,6 +197,7 @@ Line find_line_with_most_points(const vector<Point>& P) {
   int res = check(P);
   // cout << res << " " << line_max_points.second.size() << endl;
   assert(res == line_max_points->second.size());
+  assert(res == maxPoints(P) );
   // @include
   // Return the line with most points have passed.
   return max_element(table.cbegin(),
