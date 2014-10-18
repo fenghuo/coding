@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 
+using namespace std;
+
     int maximalRectangle(vector<vector<char> > &matrix) {
 
         if(matrix.empty())return 0;
@@ -64,7 +66,7 @@
     }
 
 int main(){
-	vector<vector<char> > t={{'1}};
+	vector<vector<char> > t={{'1'}};
 	cout<<maximalRectangle(t)<<endl;
 
 }
