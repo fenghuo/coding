@@ -111,6 +111,7 @@ set<int> s;
                 mx=max(mx,dict[l]);
 
             }
+	cout<<s.size()<< " ++ "<<endl;
 
         return mx;
 
