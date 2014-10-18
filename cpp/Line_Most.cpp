@@ -80,7 +80,7 @@ set<size_t> s;
             auto z= (a.k)%2;
 		if(!s.count(z)){
 		s.insert(z);
-		cout<<s.size()<<" - "<<z<<endl;
+		cout<<s.size()<<" - "<<a.k<<endl;
 		}
 		return z;
 
