@@ -177,7 +177,7 @@ int check(const vector<Point>& P) {
 
     }
 
-Line S_find_line_with_most_points(const vector<Point>& P) {
+Line find_line_with_most_points(vector<Point> P) {
   // Add all possible lines into hash table.
   unordered_map<Line, unordered_set<Point, HashPoint>, HashLine> table;
   for (int i = 0; i < P.size(); ++i) {
