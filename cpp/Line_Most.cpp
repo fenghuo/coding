@@ -19,7 +19,7 @@
 using namespace std;
 
 
-set<size_t> s;
+set<int> s;
 
   struct Point {
  
@@ -132,5 +132,5 @@ int main(){
 	for(int i=0;i<100;i++)
 		for(int j=i+1;j<20;j++)
 			p.push_back({i,j});
-	cout<<maxPoints(p)<<endl<<s<<endl;
+	cout<<maxPoints(p)<<endl<<s.size()<<endl;
 }
