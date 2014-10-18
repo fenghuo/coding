@@ -172,6 +172,7 @@ int check(const vector<Point>& P) {
                 mx=max(mx,dict[l]);
 
             }
+	cout<<mx<<endl;
 
         return mx;
 
