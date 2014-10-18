@@ -19,6 +19,8 @@
 using namespace std;
 
 
+set<size_t> s;
+
   struct Point {
  
        int x;
@@ -75,7 +77,9 @@ using namespace std;
 
             auto h=hash<int>();
 
-            return a.k%2;
+            auto z= a.k%2;
+		s.insert(z);
+		return z;
 
         }  
 
@@ -125,5 +129,5 @@ int main(){
 	for(int i=0;i<100;i++)
 		for(int j=i+1;j<20;j++)
 			p.push_back({i,j});
-	cout<<maxPoints(p);
+	cout<<maxPoints(p)<<endl<<s.size()<<endl;
 }
