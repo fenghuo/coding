@@ -75,7 +75,7 @@ using namespace std;
 
             auto h=hash<int>();
 
-            return h(a.b);
+            return 1;
 
         }  
 
