@@ -78,8 +78,10 @@ set<size_t> s;
             auto h=hash<int>();
 
             auto z= a.k%2;
+		if(!s.count(z)){
 		s.insert(z);
 		cout<<s.size()<<" - "<<endl;
+		}
 		return z;
 
         }  
