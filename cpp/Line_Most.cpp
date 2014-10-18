@@ -79,6 +79,7 @@ set<size_t> s;
 
             auto z= a.k%2;
 		s.insert(z);
+		cout<<s.size()<<" - "<<endl;
 		return z;
 
         }  
