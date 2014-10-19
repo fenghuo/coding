@@ -11,7 +11,6 @@ int i=0;
 
 void print_thread_id (int id) {
      //mtx.lock();
-	cin>>id;
 	i++;
      std::cout << "thread #" << i << '\n';
 	//mtx.unlock();
