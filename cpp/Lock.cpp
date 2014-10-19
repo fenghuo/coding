@@ -23,7 +23,7 @@ void print_thread_id (int id) {
   
         int main ()
         {
-		Pair a={1,2};
+		Pair a={1,2,3};
 		return 0;
               std::thread threads[1000];
               // spawn 10 threads:
