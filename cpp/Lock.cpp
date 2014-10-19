@@ -22,7 +22,7 @@ void print_thread_id (int id) {
         {
               std::thread threads[1000];
               // spawn 10 threads:
-              for (int i=0; i<1000; ++i)
+              for (int i=0; i<100; ++i)
                   threads[i] = std::thread(print_thread_id,i+1);
               for (auto& th : threads) th.join();
 	
