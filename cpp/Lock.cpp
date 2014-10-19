@@ -1,10 +1,12 @@
 #include<iostream>
 #include<mutex>
 #include<thread>
-#include<pair>
 
 using namespace std;
 
+struct pair{
+	int a,b;
+}
 
 mutex mtx;
 
@@ -21,7 +23,7 @@ void print_thread_id (int id) {
   
         int main ()
         {
-		pair<int,int> a={1,2};
+		pair a={1,2};
 		return 0;
               std::thread threads[1000];
               // spawn 10 threads:
