@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct pair{
+struct Pair{
 	int a,b;
 };
 
@@ -23,7 +23,7 @@ void print_thread_id (int id) {
   
         int main ()
         {
-		pair a={1,2};
+		Pair a={1,2};
 		return 0;
               std::thread threads[1000];
               // spawn 10 threads:
