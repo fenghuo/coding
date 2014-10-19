@@ -12,7 +12,7 @@ int i=0;
 void print_thread_id (int id) {
      //mtx.lock();
 	int k=i;
-	for(int z=0;z<1000000;z++)
+	for(int z=0;z<1000000;z++);
 		i=k+1;
      std::cout << "thread #" << i << '\n';
 	//mtx.unlock();
