@@ -7,11 +7,14 @@ using namespace std;
 
 mutex mtx;
 
+int i=0;
+
 void print_thread_id (int id) {
-     mtx.lock();
+     //mtx.lock();
 	cin>>id;
-     std::cout << "thread #" << id << '\n';
-	mtx.unlock();
+	i++;
+     std::cout << "thread #" << i << '\n';
+	//mtx.unlock();
 }
   
         int main ()
