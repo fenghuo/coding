@@ -20,7 +20,7 @@ void print_thread_id (int id) {
   
         int main ()
         {
-              std::thread threads00[1i000];
+              std::thread threads00[1000];
               // spawn 10 threads:
               for (int i=0; i<1000; ++i)
                   threads[i] = std::thread(print_thread_id,i+1);
