@@ -9,7 +9,9 @@ mutex mtx;
 
 void print_thread_id (int id) {
      mtx.lock();
+	cin>>id;
      std::cout << "thread #" << id << '\n';
+	mtx.unlock();
 }
   
         int main ()
