@@ -5,6 +5,7 @@
 using namespace std;
 
 
+mutex mtx;
 
 void print_thread_id (int id) {
      mtx.lock();
